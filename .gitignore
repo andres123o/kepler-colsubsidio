@@ -1,0 +1,38 @@
+# Secretos / entorno
+.env
+.env.*
+!.env.example
+
+# Datos — NUNCA subir dataset real de afiliados (Habeas Data, Ley 1266/2008)
+data/raw/
+data/real/
+*.csv
+*.parquet
+*.xlsx
+!data/sample/**
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Node / frontend (si aplica)
+node_modules/
+.next/
+out/
+dist/
+
+# Modelos entrenados (pesan, van aparte si hace falta)
+*.pkl
+*.joblib
+models/*.json
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/
