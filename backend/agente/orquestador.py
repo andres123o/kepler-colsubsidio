@@ -64,7 +64,12 @@ def procesar_segmento_mock(clase: int, producto: str, grupo_idx: int, total_grup
                 "paso", clase=clase, categoria=categoria, mensaje=texto,
                 grupo=grupo_idx, total_grupos=total_grupos,
             )
-        time.sleep(5)  # ~30s totales (6 pasos) — cabe en un pitch de 2-5 min, se siente real
+        # 2s x 6 pasos = 12s de base — en Vercel el real observado corrió más
+        # largo que la suma de sleeps (5s x 6 = 30s teóricos salieron ~50s
+        # reales, overhead de red/serverless que no se controla desde acá),
+        # así que se bajó más de lo que parecía necesario en teoría para que
+        # el total real quede cerca de 20s, no 30s.
+        time.sleep(2)
 
     contexto = contexto_segmento.contexto_de_clase(clase, producto)
     rubro = contexto_segmento.texto_visible(contexto["estilo"].get("rubro_contenido_dominante", ""))
