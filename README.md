@@ -11,8 +11,7 @@ código del backend/frontend de la instancia Trii.
 
 ## Estado
 
-- [x] Research Track 1 (modelo) — ver `resultado1.md`
-- [x] Research Track 2 (canales/stack Colsubsidio) — ver `resultado2.md`
+- [x] Research Track 1 (modelo) y Track 2 (canales/stack Colsubsidio) — notas de research internas, no versionadas
 - [x] Dataset del hackathon recibido (`Usos_Productos_Afiliados_SIN_ID.csv`, 1,566,026 filas) y diagnosticado empíricamente
 - [x] Documento maestro consolidado — `cnoslidado-estrategia.md` (arquitectura completa, corregida contra el dato real y el marco legal verificado)
 - [x] Entorno de trabajo — `.venv` propio del proyecto (ver `## Entorno` abajo)
@@ -26,11 +25,6 @@ código del backend/frontend de la instancia Trii.
 
 ```
 colsubsidio/
-  resultado1.md              — brief SOTA de modelos de personalización (research Opus 4.8)
-  resultado2.md              — mapeo de canales/stack real de Colsubsidio
-  Parametros-competencia.md  — brief oficial del reto (rubric, no-negociables, entregables)
-  informacion-importante.md  — notas crudas de la sesión informativa del hackathon
-  cnoslidado-estrategia.md   — documento maestro: arquitectura completa (MCA+LCA, motor exógeno, scorer, canal/timing)
   Usos_Productos_Afiliados_SIN_ID.csv  — dataset real (NUNCA se commitea, ver .gitignore)
   .venv/                     — entorno Python del proyecto (nunca se commitea)
   segmentacion/              — scripts de Frente A (ver abajo)
