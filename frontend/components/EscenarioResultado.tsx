@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import { extraerAlcanceKpis, type EstadoEnvio, type Producto, type ResultadoSegmento } from "@/lib/api";
 import { CampanaCanvas } from "./CampanaCanvas";
@@ -58,11 +58,13 @@ function TarjetaSegmento({
   indice,
   productos,
   onEnviar,
+  onEnviada,
 }: {
   resultado: ResultadoSegmento;
   indice: number;
   productos: Producto[];
   onEnviar: (clase: number, producto: string) => Promise<{ estado_envio: EstadoEnvio; enviada_en: string }>;
+  onEnviada: (clase: number) => void;
 }) {
   const nombreAudiencia = resultado.interes_dominante ?? `Campaña ${indice + 1}`;
   const nombreProducto = productos.find((p) => p.slug === resultado.producto)?.nombre ?? resultado.producto;
@@ -100,6 +102,7 @@ function TarjetaSegmento({
       ]);
       setEnviadaEn(respuesta.enviada_en);
       setEstado("enviada");
+      onEnviada(resultado.clase);
     } catch {
       setEstado("error");
     }
@@ -189,10 +192,36 @@ export function EscenarioResultado({
   productos: Producto[];
   onEnviar: (clase: number, producto: string) => Promise<{ estado_envio: EstadoEnvio; enviada_en: string }>;
 }) {
+  const contenedorRef = useRef<HTMLDivElement>(null);
+  const [enviadas, setEnviadas] = useState<Set<number>>(new Set());
+
+  function marcarEnviada(clase: number) {
+    setEnviadas((prev) => new Set(prev).add(clase));
+  }
+
+  // Al pasar de "revisión" a "gestión", cada tarjeta se encoge mucho (ya no
+  // muestra el canvas ni el resumen) — sin este scroll, lo que queda a la
+  // vista es lo que haya debajo (el historial), no las métricas que
+  // acaban de aparecer. Solo se dispara cuando TODAS ya se enviaron, no
+  // tarjeta por tarjeta (si una demora más que la otra, esperamos a la
+  // segunda para no saltar la vista dos veces).
+  useEffect(() => {
+    if (resultados.length > 0 && enviadas.size === resultados.length) {
+      contenedorRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [enviadas, resultados.length]);
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div ref={contenedorRef} className="grid grid-cols-1 lg:grid-cols-2 gap-5">
       {resultados.map((r, i) => (
-        <TarjetaSegmento key={r.clase} resultado={r} indice={i} productos={productos} onEnviar={onEnviar} />
+        <TarjetaSegmento
+          key={r.clase}
+          resultado={r}
+          indice={i}
+          productos={productos}
+          onEnviar={onEnviar}
+          onEnviada={marcarEnviada}
+        />
       ))}
     </div>
   );

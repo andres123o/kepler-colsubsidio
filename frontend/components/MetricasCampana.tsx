@@ -12,19 +12,16 @@ import { metricasSimuladas, type MetricasNodo } from "./CampanaCanvas";
 // nodos cuyo día todavía no llega) y en la práctica, en una demo de minutos,
 // eso se veía vacío la mayor parte del tiempo — más claro un resumen
 // agregado de toda la campaña.
-function sumarMetricas(nodos: NodoCampana[], clase: number, alcance: number): MetricasNodo {
-  return nodos.reduce(
-    (acc, n) => {
-      const m = metricasSimuladas(clase, n.dia, n.canal, alcance);
-      return {
-        enviados: acc.enviados + m.enviados,
-        entregados: acc.entregados + m.entregados,
-        abiertos: acc.abiertos + m.abiertos,
-        clics: acc.clics + m.clics,
-      };
-    },
-    { enviados: 0, entregados: 0, abiertos: 0, clics: 0 }
-  );
+//
+// Bug real corregido acá: antes se sumaba "enviados" de los 3 nodos (día 0,
+// día X, día Y), triplicando el alcance real — los 3 nodos le llegan al
+// MISMO grupo de personas en momentos distintos, no a 3 grupos distintos, así
+// que sumarlos infla el número sin sentido. Un solo cálculo representativo
+// (canal del primer nodo) sobre el alcance ya alcanza para mostrar la
+// cascada real (entrega/apertura/clic).
+function metricasFinales(nodos: NodoCampana[], clase: number, alcance: number): MetricasNodo {
+  const canalDominante = nodos[0]?.canal ?? "whatsapp";
+  return metricasSimuladas(clase, 0, canalDominante, alcance);
 }
 
 // Rampa de tiempo COMPRIMIDA a segundos (no días) para que sea observable en
@@ -67,16 +64,22 @@ export function MetricasCampana({
     return () => clearInterval(id);
   }, []);
 
-  const alcanceBase = alcanceReal ?? 50000;
-  const finales = sumarMetricas(nodos, clase, alcanceBase);
+  // El alcance real de un segmento es un número grande (cientos de miles,
+  // hasta 1.2M) — mostrarlo completo como "enviados" se sentía
+  // desproporcionado para una vista de gestión que se ve en vivo durante un
+  // demo de minutos. Techo duro de 15.000 (cómodamente bajo los 20.000
+  // pedidos), independiente del alcance real del segmento — el "Alcance
+  // real" de antes de enviar (KPI ya mostrado) sigue siendo el número
+  // honesto de a quién le llega; esto es una vista de gestión simplificada,
+  // no pretende ser el mismo número.
+  const alcanceBase = Math.min(alcanceReal ?? 12000, 15000);
+  const finales = metricasFinales(nodos, clase, alcanceBase);
   const segundosTranscurridos = enviadaEn ? (ahora - new Date(enviadaEn).getTime()) / 1000 : Infinity;
 
-  // El alcance real de un segmento ya es un número grande (cientos de miles)
-  // — mostrarlo completo como "enviados" apenas se aprueba se sentía
-  // desproporcionado. Ahora TODO sube de a poco (incluido "enviados": un
-  // batch real tampoco sale completo en 0 segundos), y más lento que antes
-  // para que los números se queden chicos durante el tiempo real que dura
-  // un demo, no se disparen a cientos de miles en el primer minuto.
+  // Todo sube de a poco (incluido "enviados": un batch real tampoco sale
+  // completo en 0 segundos) — mismo principio honesto de antes, solo que
+  // ahora sobre una base ya chica, así que los números se quedan bajos
+  // incluso una vez completada la rampa.
   const fEnviados = Math.min(1, segundosTranscurridos / 40);
   const fEntregados = Math.min(1, segundosTranscurridos / 70);
   const fAbiertos = fraccionPorTiempo(segundosTranscurridos, 220);
