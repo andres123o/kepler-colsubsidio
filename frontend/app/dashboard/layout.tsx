@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { HiOutlineArrowRightOnRectangle } from "react-icons/hi2";
@@ -19,7 +20,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-[#fffef7] flex">
       <aside className="w-56 shrink-0 bg-[#0a0a0a] flex flex-col h-screen sticky top-0">
-        <div className="px-5 py-5 border-b border-white/10">
+        <div className="px-5 py-5 border-b border-white/10 flex items-center gap-2.5">
+          <Image
+            src="/logo-colsubsidio.png"
+            alt="Colsubsidio"
+            width={28}
+            height={28}
+            className="rounded-lg"
+          />
           <span className="text-sm font-semibold text-[#fffef7]">Colsubsidio</span>
         </div>
 
