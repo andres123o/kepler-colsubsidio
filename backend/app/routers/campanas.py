@@ -9,7 +9,7 @@ EventSource nativo del navegador — el payload es solo un slug de producto.
 import json
 import threading
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from fastapi.responses import StreamingResponse
 
 from app.services.eventos import EmisorEventos
@@ -53,7 +53,4 @@ def procesar(producto: str):
 def enviar(clase: int, producto: str):
     """Confirmación humana explícita — generar la campaña nunca la envía sola
     (ver salesforce_simulado.crear_campana). Solo acá queda 'enviada'."""
-    try:
-        return salesforce_simulado.marcar_enviada(clase, producto)
-    except KeyError as e:
-        raise HTTPException(status_code=404, detail=str(e))
+    return salesforce_simulado.marcar_enviada(clase, producto)

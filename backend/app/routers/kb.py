@@ -38,6 +38,17 @@ def actualizar_kb(payload: KBActualizar):
         raise HTTPException(status_code=400, detail=f"Clave desconocida: {payload.clave}")
 
     ruta = os.path.join(DIR_KB, ARCHIVOS_KB[payload.clave])
-    with open(ruta, "w", encoding="utf-8") as f:
-        f.write(payload.contenido)
+    try:
+        with open(ruta, "w", encoding="utf-8") as f:
+            f.write(payload.contenido)
+    except OSError:
+        # Filesystem de solo lectura en despliegue serverless (Vercel) — acá
+        # no hay archivo local persistente que editar, a diferencia de local.
+        # Arreglo real pendiente: mover la KB a una tabla/KV store, como ya
+        # se documentó en agente/prompts.py. No se resolvió ahora porque no
+        # es parte del flujo principal de la demo (crear/enviar campaña).
+        raise HTTPException(
+            status_code=503,
+            detail="Editar la KB no está disponible en este despliegue (el filesystem es de solo lectura en producción).",
+        )
     return {"ok": True}
