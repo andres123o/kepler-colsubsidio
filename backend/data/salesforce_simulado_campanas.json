@@ -1,0 +1,707 @@
+{
+  "clase_3_Compra_cartera": {
+    "filtro_atributo": {
+      "segmento": 3,
+      "producto_top1": "Compra_cartera"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "dolor real de un independiente: perder la cuenta de cuánto y a quién se debe, sin mencionar el mecanismo todavía",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Como independiente, es fácil perder la cuenta de cuánto debes y a quién exactamente. Te contamos una forma de tener esto más claro."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 3,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "tasa BanRep real hoy, alta, como razón concreta para actuar ahora",
+        "canal": "email",
+        "copy": {
+          "asunto": "Tasas altas: buen momento para unificar",
+          "preheader": "Una mejor tasa uniendo tus deudas en un solo crédito",
+          "cuerpo": "Con las tasas del mercado tan altas, Colsubsidio puede darte una mejor tasa al unir tus obligaciones con otras entidades en un solo crédito."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 8,
+        "etapa": "cierre",
+        "angulo_asignado": "urgencia real ligada a la tasa alta, no a una prima que este segmento no recibe",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Mientras las tasas sigan altas, unificar tus deudas con Colsubsidio puede convenirte más que esperar. ¿Lo revisamos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "enviada",
+    "enviada_en": "2026-07-25T20:17:36.060329Z",
+    "respuesta_sfmc": {
+      "eventInstanceId": "42f62f61-3079-4c7b-85f3-22577e1669e1",
+      "statusCode": 201,
+      "simulado": true,
+      "payload_enviado": {
+        "contactKey": "segmento_3",
+        "eventDefinitionKey": "APIEvent-Colsubsidio-Campanas",
+        "data": {
+          "producto_top1": "Compra_cartera",
+          "clase": 3
+        }
+      },
+      "recibido_en": "2026-07-25T20:17:36.060329Z"
+    }
+  },
+  "clase_4_Compra_cartera": {
+    "filtro_atributo": {
+      "segmento": 4,
+      "producto_top1": "Compra_cartera"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "simplificar compromisos financieros en vez de sumar más",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Entre distintos compromisos financieros, a veces lo que más ayuda es simplificar, no sumar más. Te contamos una forma de hacerlo."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 3,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "prima real de este segmento (sí elegible libranza) conectada al tono aspiracional de estabilidad, dato distinto al nodo 1",
+        "canal": "push",
+        "copy": {
+          "titulo": "Con tu prima, un paso más hacia el orden",
+          "cuerpo": "Con Colsubsidio puedes usar tu prima para unir tus deudas en un solo crédito y ganar el orden financiero que buscas."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 8,
+        "etapa": "cierre",
+        "angulo_asignado": "cierre con el mismo hilo emocional del nodo 1 (orden/estabilidad) mas el dato más fuerte (prima de este mes)",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Ese orden financiero que buscas puede empezar con tu prima de este mes. Con Colsubsidio, tu compra de cartera sigue disponible. ¿Lo revisamos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "enviada",
+    "enviada_en": "2026-07-25T20:17:46.044709Z",
+    "respuesta_sfmc": {
+      "eventInstanceId": "01c0051e-5d19-41b3-b0e6-7b821062d1b3",
+      "statusCode": 201,
+      "simulado": true,
+      "payload_enviado": {
+        "contactKey": "segmento_4",
+        "eventDefinitionKey": "APIEvent-Colsubsidio-Campanas",
+        "data": {
+          "producto_top1": "Compra_cartera",
+          "clase": 4
+        }
+      },
+      "recibido_en": "2026-07-25T20:17:46.044709Z"
+    }
+  },
+  "clase_9_Compra_cartera": {
+    "filtro_atributo": {
+      "segmento": 9,
+      "producto_top1": "Compra_cartera"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "Carga financiera múltiple en familia con único ingreso: presentar la realidad de administrar demasiadas cuotas y fechas distintas con un solo ingreso, y nombrar que existe una forma de ordenar todo en un solo pago mensual — sin pedir acción todavía, sin revelar la diferencia de tasa concreta.",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola 👋 Manejar varias cuotas con un solo sueldo es difícil. Pronto te mostramos cómo dejar de hacer malabares y pagar todo junto en un mes."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": false,
+          "problemas": [
+            "El tono no calza con el esperado para el segmento: 'cálido/familiar enfocado en el logro y futuro de los hijos'. El mensaje habla de cuotas y sueldos en abstracto, sin ningún ancla emocional relacionada con la familia o los hijos. Podría ser copy para cualquier segmento de crédito genérico.",
+            "La apertura 'Hola 👋' seguida de una afirmación directa sobre dificultad financiera es un patrón de fórmula repetida y genérica ('Hola + problema + solución'). No suena a conversación real de WhatsApp entre personas cercanas.",
+            "La frase 'dejar de hacer malabares' es un cliché de copywriting financiero que resta naturalidad y refuerza la sensación de texto generado por plantilla.",
+            "El copy mezcla dos ideas en una misma oración final: 'cómo dejar de hacer malabares' Y 'pagar todo junto en un mes'. La regla de una sola idea por frase no se cumple.",
+            "El mensaje tiene 117 caracteres, dentro del rango permitido (50-160), pero la densidad de ideas comprimidas en esa extensión genera el problema de doble idea señalado arriba.",
+            "Leve indicio de condescendencia implícita: afirmar directamente 'es difícil' como hecho dado puede sentirse como asumir una carencia sin que el destinatario la haya expresado, lo que puede incomodar a lectores que no se identifican con esa caracterización."
+          ],
+          "sugerencia_breve": "Anclar el mensaje en el mundo familiar/hijos (ej. mención ligera a gastos del hogar o de los hijos) para que el tono cálido/familiar emerja. Separar las dos ideas de la oración final en frases distintas. Reemplazar 'hacer malabares' por lenguaje más cercano y concreto. Evitar abrir con la afirmación de dificultad como verdad universal; dejar que el lector reconozca su situación en lugar de decírsela."
+        }
+      },
+      {
+        "dia": 3,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "Contexto macro de tasas elevadas hace costoso mantener deudas separadas: responder la objeción implícita '¿y por qué ahora?' con el argumento financiero concreto — quien tiene obligaciones activas en otras entidades está pagando hoy un costo acumulado real, y la brecha entre esas tasas y la de Colsubsidio se traduce en una diferencia visible en el pago mensual que ya están haciendo.",
+        "canal": "push",
+        "copy": {
+          "titulo": "Varias deudas sueltas te salen más caro",
+          "cuerpo": "Juntarlas en una sola con Colsubsidio puede reducir lo que pagas cada mes. Vale la pena revisarlo."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": false,
+          "problemas": [
+            "El tono no calza con el segmento: se espera un tono cálido/familiar enfocado en el logro y futuro de los hijos, pero el copy habla exclusivamente en lenguaje financiero frío ('deudas sueltas', 'lo que pagas cada mes') sin ningún anclaje emocional o familiar.",
+            "El ángulo del 'contexto macro de tasas elevadas' y la brecha concreta entre tasas no aparece por ningún lado. El copy dice que 'puede reducir lo que pagas' de forma vaga, sin traducirlo en una diferencia visible o argumento financiero concreto que responda '¿y por qué ahora?'. El beneficio_concreto brilla por su ausencia.",
+            "El cuerpo tiene 80 caracteres justos pero mezcla dos ideas en una sola oración: la acción ('juntarlas en una sola con Colsubsidio') y el beneficio ('puede reducir lo que pagas cada mes'). Deben ir separadas.",
+            "El título 'Varias deudas sueltas te salen más caro' tiene un error gramatical visible ('salen más caro' en lugar de 'sale más caro' o 'cuestan más'), lo que afecta la credibilidad de la marca.",
+            "El cierre 'Vale la pena revisarlo' es una frase de relleno genérica que no agrega valor ni urgencia; serviría para cualquier campaña de cualquier producto de cualquier entidad."
+          ],
+          "sugerencia_breve": "Reescribir ancando el beneficio en algo concreto para la familia (ej. lo que se libera cada mes puede ir a lo que realmente importa en casa), incorporar el argumento de tasas como razón de urgencia ('hoy las tasas afuera están altas'), corregir el error gramatical del título y separar acción y beneficio en frases distintas."
+        }
+      },
+      {
+        "dia": 7,
+        "etapa": "cierre",
+        "angulo_asignado": "Ventana de prima como habilitador de consolidación — ángulo más fuerte para el cierre: la prima no es gasto discrecional para este perfil, es la oportunidad del semestre de reorganizar compromisos sin tocar el flujo mensual habitual. Invitar a la acción con la ventana de tiempo real: esta condición existe mientras dure el momento de prima, no como presión artificial sino como contexto financiero genuino.",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Prima encima y deudas por todos lados — una sola cuota las ordena y lo que sobra es tuyo. ¿Hablamos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": false,
+          "problemas": [
+            "El tono no calza con el segmento: 'cálido/familiar enfocado en el logro y futuro de los hijos' no aparece por ningún lado. El mensaje es transaccional y utilitario, sin ningún ancla emocional al núcleo familiar que define este perfil.",
+            "El ángulo asignado pide posicionar la prima como oportunidad de reorganizar compromisos sin tocar el flujo mensual habitual — el copy no desarrolla ese razonamiento financiero en absoluto. Solo dice 'ordena' sin explicar el beneficio concreto de la ventana.",
+            "'Deudas por todos lados' es condescendiente y asume una situación de caos financiero que el dato no declara; puede sentirse como un juicio negativo hacia el receptor.",
+            "La frase 'lo que sobra es tuyo' es genérica y podría ir en cualquier pieza de cualquier producto financiero para cualquier segmento — no hay nada específico de Compra_cartera ni del momento de prima como contexto genuino.",
+            "El mensaje tiene 74 caracteres, dentro del rango permitido (50-160), pero la brevedad extrema sacrifica la idea central del ángulo asignado (ventana de tiempo real, reorganización sin afectar flujo mensual), dejando el copy sin sustento del brief."
+          ],
+          "sugerencia_breve": "Recuperar el ancla familiar ('lo que planeaste para tus hijos este semestre') y el razonamiento financiero del ángulo: unificar deudas con la prima permite reorganizar sin comprometer el presupuesto mensual de siempre. Cerrar con la ventana de tiempo como contexto genuino, no como presión."
+        }
+      }
+    ]
+  },
+  "clase_10_Compra_cartera": {
+    "filtro_atributo": {
+      "segmento": 10,
+      "producto_top1": "Compra_cartera"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "Perfil de consolidación: sin dependientes, mayor de 55, el momento de vida ya no es acumular sino simplificar. Presentar la idea de unificar deudas no como crédito nuevo sino como recuperar control y reducir complejidad, con el descuento automático por libranza como señal de tranquilidad operativa.",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola 👋 Varias cuotas al mes se acumulan sin que te des cuenta. ¿Y si las unes en una sola, con descuento directo de tu nómina? Te cuento cómo."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": false,
+          "problemas": [
+            "Desvío del ángulo asignado: el copy habla de 'cuotas que se acumulan sin que te des cuenta', un framing de descuido o descontrol que no calza con el perfil (mayor de 55, sin dependientes, etapa de simplificación consciente). El ángulo pide presentar la unificación como recuperar control deliberado, no como solución a un problema que la persona 'no vio venir'. Eso roza la condescendencia hacia el segmento.",
+            "Tono no del todo alineado: 'sin que te des cuenta' infantiliza levemente al receptor, asumiendo falta de atención que el dato no provee. Para alguien en etapa de simplificación activa, el tono debería reconocer su agencia, no su descuido.",
+            "Oportunidad perdida de etapa confirmacion_curiosidad: el copy abre con un problema genérico en lugar de confirmar un interés previo o invitar a explorar algo que el usuario ya intuyó. La etapa pide un tono de 'esto que ya estabas pensando, aquí está la respuesta', no de detección de problema nuevo.",
+            "Levemente genérico: 'Varias cuotas al mes se acumulan' podría aplicar a cualquier segmento de cualquier campaña de compra de cartera. No hay ninguna señal de que este mensaje es para alguien en un momento de vida específico.",
+            "Conteo de caracteres: el mensaje tiene aproximadamente 115 caracteres, dentro del rango permitido (50-160). Este punto no es problema."
+          ],
+          "sugerencia_breve": "Reorientar la apertura hacia el reconocimiento del momento de vida: algo como 'A esta altura, menos vueltas es mejor...' o una pregunta que confirme lo que el usuario ya siente (simplificar, no resolver un error). Eliminar 'sin que te des cuenta' y reemplazarlo por una frase que afirme la agencia del receptor. Mantener la mención de descuento por nómina como señal de tranquilidad, que sí está bien ubicada."
+        }
+      },
+      {
+        "dia": 3,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "Sensibilidad a inflación 0.997 + interés dominante en salud: las cuotas dispersas actuales consumen el margen que esta persona necesita para gastos médicos imprevistos. El beneficio concreto no es 'ahorrar' en abstracto sino liberar flujo mensual real que pueda redirigirse a salud, que es lo que más pesa en su presupuesto y en su cabeza.",
+        "canal": "email",
+        "copy": {
+          "asunto": "Una cuota que deja espacio para tu salud",
+          "preheader": "Unir tus deudas puede liberar el margen que necesitas cada mes.",
+          "cuerpo": "Cuando llega un gasto médico inesperado, lo último que quieres es que tus cuotas actuales ya hayan consumido todo el espacio.\n\nVarias deudas dispersas hacen exactamente eso: se llevan el margen antes de que puedas decidir en qué usarlo.\n\nCon la Compra de Cartera de Colsubsidio, esas obligaciones se convierten en un solo pago mensual — más manejable, y con margen real para respirar cuando llegue un imprevisto de salud.\n\nNo estamos hablando de ahorrar en teoría. Hablamos de que un gasto médico no te tome con las manos vacías.\n\nYa tenemos tu información lista. Solo falta un paso tuyo.\n\nVer cómo funciona →"
+        },
+        "problemas_gate_l1": [
+          "Campos que no aplican al canal email: {'cuerpo'}"
+        ],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": [],
+          "sugerencia_breve": "El copy cumple en todos los criterios: sigue el ángulo de sensibilidad a inflación + salud con beneficio concreto (liberar flujo real, no 'ahorrar en abstracto'), el tono es cercano y tranquilizador sin tecnicismos, suena humano con variación de ritmo y frases cortas que no se sienten de plantilla, no hay condescendencia ni asunciones de carencia más allá del dato asignado, no se filtra ninguna etiqueta interna ni monto ni entidad externa, el asunto tiene 42 caracteres y el preheader 61 (ambos dentro de rango), y cada frase porta una sola idea. El único detalle menor a considerar en producción: 'Ya tenemos tu información lista' implica personalización dinámica — verificar que el sistema de envío efectivamente popule un dato o que la frase se ajuste si el flujo no lo soporta."
+        }
+      },
+      {
+        "dia": 7,
+        "etapa": "cierre",
+        "angulo_asignado": "Tasa BanRep 12% (muy sobre la meta) + ventana de prima activa: las deudas actuales en otras entidades probablemente están costando más de lo que deberían en este entorno de tasa alta, y la prima que acaba de llegar es la palanca concreta para consolidarlas ahora. Invitar a revisar las condiciones de Compra de Cartera antes de que la ventana de liquidez de la prima se diluya en gastos menores.",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola 👋 Tu prima llegó — buen momento para juntar todas tus deudas en un solo pago con Colsubsidio y dejar de pagar de más. ¿Lo vemos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": false,
+          "problemas": [
+            "El copy no menciona ni insinúa el contexto de tasa alta (BanRep 12%) que es el argumento central del ángulo asignado: la razón de urgencia es que las deudas en otras entidades están costando más de lo que deberían en este entorno, y eso no aparece de ninguna forma, ni siquiera implícita.",
+            "La frase 'dejar de pagar de más' flota sin ancla: no hay ninguna señal —por mínima que sea— de por qué en este momento las condiciones de otras entidades pueden estar siendo desfavorables. Sin ese ancla, el argumento de urgencia desaparece y el mensaje pierde la lógica del ángulo de cierre.",
+            "El conteo de caracteres es de 130 caracteres, dentro del límite de 160 para WhatsApp, así que el formato técnico es correcto. Sin embargo, la frase 'juntar todas tus deudas en un solo pago' combina dos ideas en una sola oración (consolidación de deudas + beneficio de pago único), lo que viola la regla de una sola idea por frase.",
+            "El gancho '¿Lo vemos?' cierra bien en tono, pero la ausencia total del elemento 'prima como ventana que se diluye' —eje del ángulo de cierre asignado— hace que el mensaje no cumpla la etapa: invitar a actuar antes de que la liquidez de la prima se pierda en gastos menores."
+          ],
+          "sugerencia_breve": "Mantener el tono cercano y el gancho conversacional, pero incorporar —sin tecnicismos— la idea de que este momento es distinto porque las deudas afuera suelen costar más cuando las tasas están altas, y que la prima es la palanca concreta para actuar ahora antes de que se diluya. Por ejemplo, algo como: 'Tu prima es el momento justo para revisar si tus deudas actuales te están costando más de lo necesario — con Colsubsidio puedes unirlas en un solo pago. ¿Lo revisamos antes de que se vaya en otra cosa?' (verificar caracteres)."
+        }
+      }
+    ]
+  },
+  "clase_4_Libre_inversion": {
+    "filtro_atributo": {
+      "segmento": 4,
+      "producto_top1": "Libre_inversion"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "gasto de salud propio o familiar que no debería esperar al presupuesto del mes",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Cuidar tu salud y la de los tuyos no debería esperar al presupuesto del mes. Te contamos una forma simple de cubrir ese gasto."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 3,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "libranza por nómina, sin trámites eternos",
+        "canal": "push",
+        "copy": {
+          "titulo": "Tu salud, sin esperar hasta el otro mes",
+          "cuerpo": "Con Colsubsidio, Libre Inversión te permite cubrir gastos de salud hoy y pagarlos por nómina, cómodo cada mes."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 7,
+        "etapa": "cierre",
+        "angulo_asignado": "trámite pendiente, cierre sin presión",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Ese trámite de salud pendiente puede resolverse esta semana. Con Colsubsidio, tu cupo de Libre Inversión sigue disponible. ¿Lo revisamos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_0_Educativo": {
+    "filtro_atributo": {
+      "segmento": 0,
+      "producto_top1": "Educativo"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "hijo o hija cerca de terminar el colegio, el siguiente paso natural es técnico o universidad",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Si tu hijo o hija está por terminar el colegio, el siguiente paso suele ser un técnico o la universidad. Te contamos cómo financiarlo con Colsubsidio."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 2,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "cobertura real del producto (técnico, pregrado, posgrado) con plazos flexibles, dato distinto al nodo 1",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "El crédito educativo de Colsubsidio cubre técnico, pregrado o posgrado, con plazos flexibles. La universidad no depende de tener todo el dinero de una vez."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 6,
+        "etapa": "cierre",
+        "angulo_asignado": "ventana real de matrícula de enero cerca, dato más fuerte y distinto para el cierre",
+        "canal": "push",
+        "copy": {
+          "titulo": "Antes de que llegue la matrícula de enero",
+          "cuerpo": "Con Colsubsidio puedes dejar lista la matrícula del pregrado antes del afán de última hora."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_4_Hipotecario": {
+    "filtro_atributo": {
+      "segmento": 4,
+      "producto_top1": "Hipotecario"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "vivienda propia como siguiente paso natural de la estabilidad ya alcanzada",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Llevas años construyendo tu estabilidad y tal vez ya piensas en el paso a una vivienda propia. Te contamos cómo es el crédito hipotecario."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 4,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "plazo flexible de 5 a 20 años en pesos o UVR, sin presión de tiempo",
+        "canal": "push",
+        "copy": {
+          "titulo": "Hasta 20 años para tu crédito hipotecario",
+          "cuerpo": "Con Colsubsidio eliges el plazo que se ajuste a tu presupuesto, desde 5 hasta 20 años, en pesos o UVR."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 10,
+        "etapa": "cierre",
+        "angulo_asignado": "invitación a simular sin compromiso, sin presión artificial",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "El paso hacia tu vivienda propia puede empezar esta semana. Con Colsubsidio puedes simular tu crédito hipotecario sin compromiso. ¿Lo revisamos juntos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_7_Hipotecario": {
+    "filtro_atributo": {
+      "segmento": 7,
+      "producto_top1": "Hipotecario"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "vivienda aspiracional como interés secundario real de este grupo joven",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Entre tantos planes a corto plazo, seguro también piensas en tener algún día un lugar propio. Te contamos cómo empezar con un crédito hipotecario."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 4,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "plazo de hasta 20 años, modalidad a elección",
+        "canal": "email",
+        "copy": {
+          "asunto": "Tu próximo gran plan: vivienda propia",
+          "preheader": "Plazos de hasta 20 años, en pesos o UVR, a tu ritmo",
+          "cuerpo": "Con Colsubsidio puedes empezar el camino hacia tu vivienda propia con un crédito hipotecario a tu medida, con plazos de hasta 20 años y la modalidad que prefieras."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 10,
+        "etapa": "cierre",
+        "angulo_asignado": "cierre suave, invitar a simular",
+        "canal": "push",
+        "copy": {
+          "titulo": "Tu vivienda propia está mucho más cerca",
+          "cuerpo": "Con Colsubsidio puedes simular tu crédito hipotecario hoy mismo y ver qué tan cerca estás de dar el paso."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_2_Libre_inversion": {
+    "filtro_atributo": {
+      "segmento": 2,
+      "producto_top1": "Libre_inversion"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "proyecto tecnológico pendiente, financiable ya sin esperar a ahorrar todo",
+        "canal": "push",
+        "copy": {
+          "titulo": "Ese proyecto tecnológico que tienes pendiente",
+          "cuerpo": "Podrías financiarlo hoy mismo y pagarlo cómodo, mes a mes, sin esperar a ahorrar todo de una vez."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 3,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "monto amplio (hasta 150 millones) con descuento directo por nómina",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Con Libre Inversión de Colsubsidio puedes financiar hasta 150 millones, con el descuento directo de tu nómina cada mes. ¿Simulamos tu cuota?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 7,
+        "etapa": "cierre",
+        "angulo_asignado": "cupo disponible, cierre sin presión artificial",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Tu próximo upgrade no tiene que esperar más. Con Colsubsidio, tu cupo de Libre Inversión sigue disponible. ¿Lo activamos esta semana?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_2_Educativo": {
+    "filtro_atributo": {
+      "segmento": 2,
+      "producto_top1": "Educativo"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "formación propia (técnico o pregrado) pendiente, financiable ya",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Ese técnico o pregrado que tienes pendiente puede arrancar antes de lo que crees. Te contamos cómo financiarlo."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 2,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "plazos flexibles, sin frenar otros planes",
+        "canal": "push",
+        "copy": {
+          "titulo": "Tu pregrado, a tu propio ritmo y sin afán",
+          "cuerpo": "Con Colsubsidio, el crédito educativo te deja pagar tu formación en plazos flexibles, sin frenar tus otros planes."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 6,
+        "etapa": "cierre",
+        "angulo_asignado": "cierre invitando a empezar ya",
+        "canal": "email",
+        "copy": {
+          "asunto": "Tu formación no tiene que esperar",
+          "preheader": "Plazos flexibles con el crédito educativo de Colsubsidio",
+          "cuerpo": "Con Colsubsidio puedes empezar tu técnico o pregrado ya y pagarlo en plazos flexibles, sin desordenar tu presupuesto actual."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_0_Rotativo_cupo": {
+    "filtro_atributo": {
+      "segmento": 0,
+      "producto_top1": "Rotativo_cupo"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "gastos del día a día que no avisan, necesidad inmediata real",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Hola. Los gastos del día a día no siempre avisan. Tenemos un cupo que se ajusta a lo que necesites este mes. ¿Te cuento cómo funciona?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 2,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "cupo renovable, se recupera al pagar",
+        "canal": "push",
+        "copy": {
+          "titulo": "Tu cupo Colsubsidio, listo cuando lo necesites",
+          "cuerpo": "Con Colsubsidio, cada compra reduce tu cupo y cada pago lo recupera, para lo del día a día sin afán."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 5,
+        "etapa": "cierre",
+        "angulo_asignado": "gasto imprevisto, cierre sin presión",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Ese gasto que se salió del presupuesto puede resolverse hoy. Con Colsubsidio, tu cupo rotativo sigue disponible. ¿Lo activamos?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  },
+  "clase_1_Rotativo_cupo": {
+    "filtro_atributo": {
+      "segmento": 1,
+      "producto_top1": "Rotativo_cupo"
+    },
+    "nodos": [
+      {
+        "dia": 0,
+        "etapa": "confirmacion_curiosidad",
+        "angulo_asignado": "ingreso irregular (independiente), flujo de caja pesa más que consumo",
+        "canal": "push",
+        "copy": {
+          "titulo": "Tu flujo de caja, siempre bajo control",
+          "cuerpo": "Con un cupo rotativo de Colsubsidio, decides cuánto usar cada mes según cómo te vaya, sin presión fija."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 2,
+        "etapa": "beneficio_concreto",
+        "angulo_asignado": "cupo que se ajusta a ingresos variables",
+        "canal": "whatsapp",
+        "copy": {
+          "mensaje": "Con ingresos que varían de mes a mes, un cupo que se ajusta a lo que necesitas hace la diferencia. ¿Simulamos tu cupo con Colsubsidio?"
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      },
+      {
+        "dia": 5,
+        "etapa": "cierre",
+        "angulo_asignado": "cierre invitando a activar",
+        "canal": "push",
+        "copy": {
+          "titulo": "Tu cupo Colsubsidio, listo para usar",
+          "cuerpo": "Actívalo hoy y úsalo cuando tu flujo de caja lo pida, sin trámites de última hora."
+        },
+        "problemas_gate_l1": [],
+        "veredicto_gate_l2": {
+          "aprobado": true,
+          "problemas": []
+        }
+      }
+    ],
+    "estado_envio": "borrador",
+    "enviada_en": null
+  }
+}

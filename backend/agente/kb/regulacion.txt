@@ -1,0 +1,45 @@
+KNOWLEDGE BASE — REGULACIÓN: QUÉ SE PUEDE Y QUÉ NO SE PUEDE DECIR
+Fuente: verificado en cnoslidado-estrategia.md §10 (investigación previa del proyecto) +
+confirmado 24-jul-2026 contra ssf.gov.co.
+
+QUIÉN REGULA A COLSUBSIDIO
+Colsubsidio NO está vigilada por la Superintendencia Financiera (SFC) para su crédito — la
+vigila la Superintendencia del Subsidio Familiar (Supersubsidio, ssf.gov.co), un ente adscrito
+al Ministerio del Trabajo que supervisa a las Cajas de Compensación Familiar. Búsqueda 24-jul-2026
+confirma su función: preservar estabilidad, seguridad y confianza del sistema de subsidio
+familiar — no se encontró un manual público específico de qué NO decir en publicidad de
+crédito, así que las reglas de abajo vienen de las normas ya verificadas, no de una norma
+específica de Supersubsidio sobre lenguaje publicitario.
+
+NUNCA SE DICE (sin excepción, en ningún paso de la cadena):
+- Nada relacionado con DataCrédito ni burós de crédito externos — regla explícita del reto,
+  y corresponde a Ley 1266/2008 (Habeas Data financiero), que rige exclusivamente centrales de
+  riesgo (DataCrédito/CIFIN).
+- Ningún monto exacto de crédito — el sistema no calcula montos en esta fase (decisión de
+  alcance del proyecto, no una restricción legal).
+- Ninguna promesa de aprobación garantizada — el motor decide elegibilidad/interés, no aprueba
+  crédito; la aprobación real es un proceso posterior fuera de este sistema.
+- Ninguna etiqueta interna de segmentación (Categoría A/B/C, "Clase 9", "score") — son
+  herramientas internas, no algo que el afiliado deba ver de sí mismo.
+
+SÍ SE PUEDE DECIR, CON RESPALDO LEGAL REAL:
+- Que Colsubsidio usa la información que ya tiene del afiliado para personalizar ofertas — el
+  aviso de privacidad de Colsubsidio (colsubsidio.com, documento público) autoriza explícitamente
+  el uso de datos internos para "envío de información comercial, ofertas y promociones". Esto no
+  necesita un argumento defensivo, ya está cubierto por la política de datos vigente.
+- El enriquecimiento con comportamiento digital/redes sociales (si se usa) se rige por Ley
+  1581/2012 + Decreto 1377/2013 (régimen general de protección de datos, vigilada por la SIC),
+  con excepción de dato de fuente pública — distinto de la Ley 1266/2008, que NO aplica a este
+  tipo de dato.
+- La categoría de afiliación (A/B/C, Decreto 1072/2015 art. 2.2.7.4.1.1) es un tramo salarial
+  declarado por el empleador, no un score de riesgo — puede citarse internamente en análisis y
+  documentación del equipo, nunca en el copy dirigido al afiliado.
+- Libranza (Ley 1527/2012 art. 3 núm. 5): el descuento por libranza tiene tope legal real de
+  máximo 50% del salario o pensión neto — esto ya es la base del gate de elegibilidad del motor
+  (Facultativos/Independientes sin nómina/pensión quedan excluidos de Libre Inversión), no hace
+  falta mencionarlo en el copy, pero el agente nunca debe ofrecer libranza a quien no califica.
+
+PENDIENTE / NO VERIFICADO:
+- Texto exacto de alguna circular de Supersubsidio sobre publicidad de servicios financieros de
+  cajas de compensación (no se encontró documento público específico) — si aparece antes del
+  pitch, actualizar este archivo.

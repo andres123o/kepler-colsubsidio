@@ -1,0 +1,32 @@
+===== CLASE 3 =====
+Resumen ejecutivo: Este segmento de afiliados independientes, mayormente jóvenes y sin descuento automático de nómina, está en un momento de revisión activa de sus obligaciones financieras: calculan cuánto deben, a quién y cuándo vence, sin desesperación pero con atención real al costo de mantener múltiples créditos. Se les ofrece Compra de Cartera con un enfoque operativo y basado en datos — una sola cuota predecible en lugar de varias, en un entorno donde la tasa BanRep al 12% hace que cada mes de deuda dispersa cueste más de lo necesario. El momento es favorable porque la ventana de prima recién activa genera liquidez puntual que reduce la fricción para iniciar la consolidación sin comprometer el flujo mensual habitual.
+KPIs: [{"etiqueta": "Producto", "valor": "Compra de Cartera", "tipo": "neutro"}, {"etiqueta": "Segmento (perfil)", "valor": "Independientes 20-35 años, 98% sin libranza, sensibilidad inflación 0.687", "tipo": "neutro"}, {"etiqueta": "Ángulo principal", "valor": "Simplificación operativa del gasto financiero: una cuota, una tasa, una fecha — anclado en datos, no en urgencia emocional", "tipo": "oportunidad"}, {"etiqueta": "Canal", "valor": "WhatsApp (principal) → Push (secundario)", "tipo": "neutro"}]
+  Dia 0 (whatsapp, etapa confirmacion_curiosidad): {"mensaje": "¿Te llegó la prima? Antes de gastarla, revisa si unificar tus deudas con Colsubsidio te baja la cuota mensual. Vale la pena verlo 👀"}
+    Angulo asignado: Ventana de prima como momento concreto para revisar cuánto cuestan realmente las deudas actuales — no una promesa de ahorro genérica, sino una invitación a calcular con un dato real a la mano y liquidez reciente disponible.
+    L1 problemas: []
+    L2 aprobado: False
+  Dia 3 (push, etapa beneficio_concreto): {"titulo": "¿Varias deudas? Un solo pago.", "cuerpo": "Únelas en Colsubsidio y ya solo tienes una fecha al mes, un monto fijo — y la cabeza más despejada."}
+    Angulo asignado: Para alguien que administra sus pagos sin descuento automático de nómina, manejar varias fechas y cuotas distintas tiene un costo administrativo real. Una sola cuota mensual predecible elimina esa carga operativa — el ángulo es control y simplicidad del flujo, no alivio emocional.
+    L1 problemas: ["'titulo' tiene 29 caracteres, fuera del rango 35-50 para push"]
+    L2 aprobado: False
+  Dia 7 (whatsapp, etapa cierre): {"mensaje": "Hola. Varios créditos a la vez significan más intereses de los que necesitas pagar. Colsubsidio los une en uno solo. ¿Lo miramos?"}
+    Angulo asignado: Con la tasa BanRep en 12% — muy por encima de su meta histórica — cada mes que se mantienen múltiples créditos dispersos tiene un costo medible y evitable. El dato concreto de tasa es el argumento de fondo para invitar a iniciar la consolidación ahora, sin urgencia artificial: la ventana y el número hablan solos.
+    L1 problemas: []
+    L2 aprobado: False
+
+===== CLASE 4 =====
+Resumen ejecutivo: Este segmento (46-55 años, mayoría sin grupo familiar dependiente) mira sus finanzas desde el orden y la optimización: la pregunta que ya se están haciendo es si están pagando más de lo necesario por deudas acumuladas a lo largo de su trayectoria profesional. Se les ofrece Compra de Cartera como una herramienta de consolidación racional — simplificar y abaratar lo que ya deben, no adquirir algo nuevo — con la prima de mitad de año como palanca de acción concreta. El cierre se ancla en la Feria de Vivienda de julio 2026: ordenar la carga de deuda hoy es el paso previo lógico para que la aspiración de vivienda no se frene por obligaciones dispersas.
+KPIs: [{"etiqueta": "Producto", "valor": "Compra de Cartera", "tipo": "neutro"}, {"etiqueta": "Segmento (perfil)", "valor": "46-55 años, ~54% sin grupo familiar dependiente", "tipo": "neutro"}, {"etiqueta": "Ángulo principal", "valor": "Consolidación y optimización de deuda existente (tasa BanRep 12%)", "tipo": "oportunidad"}, {"etiqueta": "Canal", "valor": "WhatsApp (principal) + Push (secundario)", "tipo": "neutro"}]
+  Dia 0 (whatsapp, etapa confirmacion_curiosidad): {"mensaje": "Hola 👋 Una deuda de hace dos años probablemente ya te costó más de lo que pensabas. ¿Y si revisamos si puedes pagar menos desde hoy?"}
+    Angulo asignado: Tasa BanRep 12% + optimización de deuda existente: presentar la idea de que las deudas acumuladas en distintos momentos del ciclo pueden estar costando más de lo necesario hoy — sin pedir acción todavía, solo activar la pregunta '¿estoy pagando de más?'
+    L1 problemas: []
+    L2 aprobado: False
+  Dia 3 (push, etapa beneficio_concreto): {"titulo": "Usa tu prima para unificar tus deudas", "cuerpo": "Ya tienes la plata extra -- aprovéchala para juntar todo en un solo pago antes de que el mes apriete."}
+    Angulo asignado: Ventana de prima de mitad de año como palanca de acción: la prima es un flujo de efectivo puntual que, sin dependientes que lo absorban, puede usarse para iniciar la consolidación ahora — cuando hay liquidez disponible — y no en un momento de aprieto
+    L1 problemas: []
+    L2 aprobado: False
+  Dia 7 (whatsapp, etapa cierre): {"mensaje": "Hola 👋 La Feria de Vivienda es el 24 de julio — unificar tus deudas antes puede dejarte con más cupo disponible. ¿Le damos?"}
+    Angulo asignado: Feria de Vivienda Colsubsidio (24-26 julio 2026, Club El Cubo): consolidar deudas dispersas mediante compra de cartera mejora el perfil de capacidad de pago — el paso concreto para que la aspiración de vivienda no se detenga por una carga de obligaciones desorganizadas. Invitar a iniciar el proceso antes de la feria
+    L1 problemas: []
+    L2 aprobado: False
+

@@ -1,0 +1,66 @@
+{
+  "3": {
+    "clase": 3,
+    "producto_top1": "Compra_cartera",
+    "rubro": "Consolidación de deudas",
+    "tono": "Directo/datos -- tranquilidad financiera, cifras claras (tasa, cuota), no emocional",
+    "canal_recomendado": "WhatsApp primero (open rate 85-98% vs push 20-40% vs email 20-25%), push como secundario de bajo costo, email de respaldo/registro",
+    "elegible_libranza": false
+  },
+  "4": {
+    "clase": 4,
+    "producto_top1": "Compra_cartera",
+    "rubro": "Vivienda / libre inversión aspiracional",
+    "tono": "Aspiracional -- vivienda como símbolo de estabilidad/realización (hallazgo Raddar)",
+    "canal_recomendado": "WhatsApp primero (open rate 85-98% vs push 20-40% vs email 20-25%), push como secundario de bajo costo, email de respaldo/registro",
+    "elegible_libranza": true
+  },
+  "9": {
+    "clase": 9,
+    "producto_top1": "Compra_cartera",
+    "rubro": "Educación de los hijos",
+    "tono": "Cálido/familiar -- enfocado en el logro y futuro de los hijos, no en el crédito en sí",
+    "canal_recomendado": "WhatsApp primero (open rate 85-98% vs push 20-40% vs email 20-25%), push como secundario de bajo costo, email de respaldo/registro",
+    "elegible_libranza": true
+  },
+  "10": {
+    "clase": 10,
+    "producto_top1": "Compra_cartera",
+    "rubro": "Salud",
+    "tono": "Cercano/tranquilizador -- bienestar y protección, evitar tecnicismos",
+    "canal_recomendado": "WhatsApp primero + email de respaldo (push poco confiable: alta tasa de deshabilitar en este segmento)",
+    "elegible_libranza": true
+  },
+  "0": {
+    "clase": 0,
+    "producto_top1": "Educativo",
+    "rubro": "Día a día / rotativo",
+    "tono": "Práctico/urgente -- resolver el mes, no aspiracional",
+    "canal_recomendado": "WhatsApp primero (open rate 85-98% vs push 20-40% vs email 20-25%), push como secundario de bajo costo, email de respaldo/registro",
+    "elegible_libranza": true
+  },
+  "7": {
+    "clase": 7,
+    "producto_top1": "Hipotecario",
+    "rubro": "Viajes",
+    "tono": "Aspiracional/visual -- experiencias, no el producto financiero",
+    "canal_recomendado": "WhatsApp y Push como igual de fuertes (27% de millennials prefiere push a SMS en banca -- alto compromiso digital de este segmento), email de respaldo",
+    "elegible_libranza": true
+  },
+  "2": {
+    "clase": 2,
+    "producto_top1": "Educativo",
+    "rubro": "Tecnología / entretenimiento",
+    "tono": "Directo, orientado a apps/autogestión -- coherente con uso fintech real de millennials/Gen Z",
+    "canal_recomendado": "WhatsApp y Push como igual de fuertes (27% de millennials prefiere push a SMS en banca -- alto compromiso digital de este segmento), email de respaldo",
+    "elegible_libranza": true
+  },
+  "1": {
+    "clase": 1,
+    "producto_top1": "Rotativo_cupo",
+    "rubro": "Rotativo / flujo de caja",
+    "tono": "Práctico/urgente -- lenguaje de control y previsibilidad, no de consumo",
+    "canal_recomendado": "WhatsApp y Push como igual de fuertes (27% de millennials prefiere push a SMS en banca -- alto compromiso digital de este segmento), email de respaldo",
+    "elegible_libranza": false
+  }
+}

@@ -3,13 +3,22 @@
 .env.*
 !.env.example
 
-# Datos — NUNCA subir dataset real de afiliados (Habeas Data, Ley 1266/2008)
+# Datos — NUNCA subir dataset real de afiliados, ni derivados a nivel de
+# persona (Habeas Data, Ley 1266/2008). data_limpia.pkl es la versión
+# limpia del mismo dataset real por afiliado — mismo riesgo que el crudo
+# aunque esté anonimizado (SERIE, no cédula), así que se excluye igual.
 data/raw/
 data/real/
+data/processed/data_limpia.pkl
 *.csv
 *.parquet
 *.xlsx
 !data/sample/**
+# Sí se suben (la app en vivo los necesita para correr, ver
+# agente/contexto_segmento.py): las tablas agregadas POR CLASE (12 filas,
+# nunca por persona) y el tamaño real por clase precalculado.
+!backend/data/theta_k/*.csv
+!backend/data/processed/tamano_clases.json
 
 # Python
 __pycache__/
@@ -25,7 +34,13 @@ node_modules/
 out/
 dist/
 
-# Modelos entrenados (pesan, van aparte si hace falta)
+# Modelos entrenados sin comprimir — pesan 143-175MB, GitHub rechaza
+# archivos de más de 100MB. El modelo LCA real (lca_modelo.pkl, ~2MB
+# comprimido) y las probabilidades reales por afiliado (lca_pi.pkl, ~62MB
+# comprimido) SÍ se suben como .pkl.gz para que un jurado técnico pueda
+# ver/cargar el modelo entrenado real, no solo el JSON derivado — la app en
+# vivo no necesita ninguno de los dos sin comprimir. *.pkl.gz no lo toca
+# esta regla (termina en .gz, no en .pkl), así que no hace falta negarlo.
 *.pkl
 *.joblib
 models/*.json
@@ -36,3 +51,15 @@ models/*.json
 .DS_Store
 Thumbs.db
 .claude/
+
+# Documentación interna de trabajo — notas del equipo, no hace falta que
+# vivan en el repo que se entrega (el README sí queda, es lo que pide el reto).
+Parametros-competencia.md
+aquinosquedamosayer.md
+avance.md
+cnoslidado-estrategia.md
+informacion-importante.md
+investigacion-conexion-sap-salesforce.md
+resultado1.md
+resultado2.md
+inspiraion dashboard/

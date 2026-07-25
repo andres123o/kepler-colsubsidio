@@ -1,0 +1,92 @@
+KNOWLEDGE BASE — CATÁLOGO DE PRODUCTOS DE CRÉDITO COLSUBSIDIO
+Fuente: colsubsidio.com/creditos (páginas por producto), investigado 24-jul-2026.
+Nota: colsubsidio.com no publica tasas exactas en texto público (varían por categoría de
+afiliación y por legalización) — se usa "tasa según categoría de afiliación" como la única
+referencia honesta, nunca se inventa un número de tasa.
+
+═══════════════════════════════════════════════════════════════════
+1. CRÉDITO HIPOTECARIO
+═══════════════════════════════════════════════════════════════════
+Para: compra de vivienda.
+Modalidad: UVR o pesos.
+Plazo: 5 a 20 años.
+Requisitos: afiliado a Colsubsidio, cédula de ciudadanía colombiana, edad 18-65 años, ingreso
+familiar mínimo 1 SMMLV.
+  - Asalariados: contrato laboral vigente, antigüedad mínima 6 meses (o 1 año si el contrato no
+    es a término indefinido).
+Fuente: colsubsidio.com/creditos/vivienda/hipotecario
+
+═══════════════════════════════════════════════════════════════════
+2. CRÉDITO DE CONSUMO (general)
+═══════════════════════════════════════════════════════════════════
+Para: objetivos de vida amplios — incluye modalidades como educación, cambio de vehículo
+familiar, remodelación del hogar, compra de cartera de deudas, entre otras.
+Incluye: cobertura oncológica y beneficios integrales (ver nota abajo).
+Monto: ajustable según capacidad de pago.
+Requisitos generales: edad 18-69 años, ingreso mínimo 1 SMMLV, afiliado a Colsubsidio.
+Fuente: colsubsidio.com/creditos/consumo
+
+NOTA IMPORTANTE PARA EL AGENTE: en la página real, "Consumo" es una modalidad amplia que puede
+incluir educación o compra de cartera como sub-casos — pero para este reto (y este sistema) se
+tratan como 7 líneas SEPARADAS y excluyentes entre sí (así lo define el catálogo oficial del
+hackathon, `Parametros-competencia.md`). No mezclar: si el motor ya decidió "Educativo" para un
+segmento, se comunica como línea Educativa, no como "Consumo modalidad educación".
+
+═══════════════════════════════════════════════════════════════════
+3. CRÉDITO LIBRE INVERSIÓN
+═══════════════════════════════════════════════════════════════════
+Para: viajes, salud, vivienda u otros fines — libre destinación.
+Mecanismo: libranza (descuento directo de nómina o pensión).
+Monto: $500.000 a $150.000.000.
+Tasa: preferencial, varía según categoría de afiliación y la vigente al momento de legalizar.
+Requisitos: edad 18-69 años, ingreso > 1 SMMLV, afiliado a Colsubsidio.
+  - Asalariados: antigüedad mínima 2 meses (6 meses si el contrato no es a término indefinido).
+  - Independientes: antigüedad de afiliación mínima 6 meses + continuidad de actividad mínimo 1 año.
+Restricción real del sistema (Ley 1527/2012): SOLO aplica a quien tiene nómina o pensión de
+donde descontar — afiliados Facultativos/Independientes (sin relación laboral) NO son elegibles,
+sin importar los demás requisitos. Esto ya está aplicado como gate determinístico en el motor.
+Fuente: colsubsidio.com/creditos/consumo/libre-inversion
+
+═══════════════════════════════════════════════════════════════════
+4. CRÉDITO EDUCATIVO
+═══════════════════════════════════════════════════════════════════
+Para: técnico, tecnológico, pregrado o posgrado en instituciones acreditadas.
+Plazos: flexibles.
+Tasas: competitivas (no se publica cifra exacta pública).
+Fuente: colsubsidio.com/creditos/educativo
+
+═══════════════════════════════════════════════════════════════════
+5. CRÉDITO ROTATIVO (consumo / cupo)
+═══════════════════════════════════════════════════════════════════
+Para: gastos del día a día (educación, farmacia, alimentación, tecnología, vestuario, hogar,
+experiencias), con beneficios en aliados (droguerías, hoteles, agencia de viajes Colsubsidio).
+Mecanismo: cupo renovable — cada compra reduce el cupo disponible, al pagar se recupera capacidad.
+Monto: $150.000 a $5.000.000.
+Fuente: colsubsidio.com/creditos (portafolio general)
+
+═══════════════════════════════════════════════════════════════════
+6. CRÉDITO ROTATIVO PARA SEGUROS E IMPUESTOS
+═══════════════════════════════════════════════════════════════════
+Para: pago de impuestos, seguros y gastos inmediatos.
+Monto: hasta $5.000.000.
+Plazos: flexibles, hasta 11 meses.
+Fuente: colsubsidio.com/creditos/rotativo
+
+═══════════════════════════════════════════════════════════════════
+7. COMPRA DE CARTERA / UNIFICACIÓN DE DEUDAS
+═══════════════════════════════════════════════════════════════════
+Para: unificar varias obligaciones (con otras entidades) en un solo crédito.
+Beneficio: menor tasa de interés, mejores plazos, un solo pago en vez de varios.
+Fuente: colsubsidio.com/creditos/consumo/compra-cartera
+
+═══════════════════════════════════════════════════════════════════
+REQUISITOS GENERALES (aplican a todas las líneas salvo excepción indicada arriba)
+═══════════════════════════════════════════════════════════════════
+- Edad: 18 a 69 años (Hipotecario: 18 a 65 años).
+- Ingreso mínimo: 1 SMMLV.
+- Ser afiliado a Colsubsidio.
+- Antigüedad laboral/de afiliación: varía por línea (ver cada producto arriba) — el sistema NO
+  verifica este requisito hoy (no existe esa columna en los datos de segmentación), se deja como
+  contexto informativo para el copy, no como gate del motor.
+- Categoría de afiliación (A/B/C, Decreto 1072/2015) afecta la tasa ofrecida — HECHO
+  administrativo, nunca se menciona al afiliado en el copy (ver regulacion.txt).

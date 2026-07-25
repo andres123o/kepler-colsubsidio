@@ -1,0 +1,13 @@
+﻿clase,interes_1,interes_2,interes_3,confianza,razonamiento
+0,Día a día / rotativo,Educación de los hijos,,media,"100% F, Cat A (presupuesto ajustado -> necesidad inmediata primero), 55.6% monoparental + 11.2% nuclear integral (67% con hijos probable) -> educación real pero secundaria/periódica"
+1,Rotativo / flujo de caja,Tecnología / entretenimiento,,media,"95% M, joven, Cat A, 100% sin grupo, régimen independiente/facultativo -> ingreso irregular, flujo de caja pesa más que consumo discrecional"
+2,Tecnología / entretenimiento,Ahorro para educación,,alta,"91% <35 (mezcla Gen Z + millennial temprano, bucket no distingue exacto), 100% sin grupo, Cat A -> match directo con estudio Gen Z Colombia (58% tech, 30% ahorra para educación)"
+3,Consolidación de deudas,Salud,,BAJA,"Cat B, régimen 'Independiente' (98%), edad muy repartida sin pico -> inferencia razonable, sin cifra de investigación específica detrás, distinta de las demás filas"
+4,Vivienda / libre inversión aspiracional,Salud,Consolidación de deudas,media,"0% jóvenes, mejor mezcla de ingreso de las 12 clases (31.6% Cat C), 54.4% sin grupo familiar, Bogotá 55% -> profesional establecido, sin dependientes, ingreso alto"
+5,Genérico -- sin señal suficiente,,,muy baja,Dato 'Sin dato' dominante en casi todas las columnas -- no asignar interés fino
+6,Día a día / rotativo,Educación (si hay hijos),,media,"100% M, Cat A, familia mixta -- 36.7% sin grupo / 35% monoparental / 22.5% nuclear (no hay mayoría clara, se deja condicional)"
+7,Viajes,Vivienda aspiracional,Tecnología,media,"85.6% joven, mejor mezcla de ingreso entre clases jóvenes (13.5% Cat C), empresa foco (empleo formal/grande) -> match con Raddar (87% quiere viajar, vivienda = símbolo de estabilidad) más creíble aquí que en 1/2/8 por el ingreso/estabilidad"
+8,Tecnología / entretenimiento,Viajes,,media,"84.4% joven, 99.7% sin grupo (el perfil 'soltero' más puro), sin ventaja de ingreso particular -> perfil genérico joven-soltero"
+9,Educación de los hijos,Vivienda,Consolidación de deudas,media,"Adultos 36-55+, buena mezcla de ingreso (27.2% Cat C), 66% con estructura familiar (38.3% monoparental + 18.5% nuclear + 9.6% pareja), empresa foco -> edad de padres compatible con hijos en edad escolar/universitaria"
+10,Salud,Tranquilidad financiera / consolidación,,alta,"95.4% mayores de 55 (pensionados), Cat A, sin grupo/pareja (sin dependientes jóvenes) -> salud es la prioridad mejor fundamentada de las 12"
+11,Educación de los hijos,,,alta,"86.7% monoparental (55.6% + 8.6% ampliada) -- la concentración más alta de las 12 clases, sin nadie mayor de 46 años -> señal más limpia y específica del set"

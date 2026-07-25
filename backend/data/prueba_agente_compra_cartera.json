@@ -1,0 +1,292 @@
+[
+  {
+    "clase": 3,
+    "producto": "Compra_cartera",
+    "analisis": {
+      "angulos_disponibles": [
+        {
+          "senal": "tasa BanRep elevada + ventana de prima",
+          "dato_concreto": "Tasa BanRep 12%, muy por encima de la meta; ventana de prima activa como momento de efectivo extra para consolidar",
+          "por_que_importa": "Un afiliado que carga varias deudas contraídas en un entorno de tasas altas tiene hoy un costo real de intereses más alto que en ciclos anteriores. La prima genera liquidez puntual que puede usarse para activar la consolidación sin comprometer el flujo mensual habitual — es una ventana concreta, no una promesa genérica de ahorro."
+        },
+        {
+          "senal": "perfil independiente sin libranza + sensibilidad de flujo moderada",
+          "dato_concreto": "98% régimen independiente (no elegible para libranza); sensibilidad a inflación 0.687",
+          "por_que_importa": "Sin descuento automático de nómina, este segmento gestiona sus pagos de forma activa y múltiple — la carga administrativa de varias cuotas a distintas fechas es real. Una sola cuota predecible cada mes calza directamente con cómo organizan su flujo: el ángulo es control y simplificación operativa del gasto financiero, no urgencia emocional."
+        },
+        {
+          "senal": "confianza baja en el interés dominante",
+          "dato_concreto": "Confianza en la señal de interés 'Consolidación de deudas': BAJA — inferencia razonable sin cifra de investigación específica detrás",
+          "por_que_importa": "La propensión a compra de cartera es real en el vector de interés, pero la señal es débil. Eso implica que el ángulo correcto no puede asumir que el afiliado ya se identificó con 'tengo demasiadas deudas' — debe partir de un beneficio concreto y verificable (una cuota, una tasa, una fecha menos) antes de tocar la narrativa de consolidación. El rubro ya indica 'directo/datos, no emocional': el copy del paso 2 debe anclar en cifras, no en alivio psicológico."
+        }
+      ],
+      "estado_mental": "Un afiliado de este perfil — independiente, mayoritariamente sin grupo familiar, en sus 20 a 35 años — probablemente está gestionando solo varias obligaciones financieras adquiridas en los últimos años, sin el colchón de un descuento automático de nómina que le simplifique la administración. En este momento del año, con prima recibida y fechas tributarias recién ajustadas, el pensamiento más probable es de revisión activa: cuánto debo, a quién, cuándo vence — no de desesperación, sino de cálculo.",
+      "justificacion_producto": "Compra de cartera calza con este segmento porque la propuesta de valor es operativa y medible: una cuota en lugar de varias, en un entorno donde la tasa BanRep al 12% encarece el costo real de mantener múltiples créditos dispersos. Para alguien que administra sus finanzas sin libranza ni descuento automático, la simplificación de pagos y la posibilidad de fijar una tasa más favorable son argumentos de fondo, no de urgencia — lo que es exactamente lo que el rubro de tono (directo/datos, tranquilidad financiera) pide."
+    },
+    "plan": {
+      "resumen": "Este segmento de afiliados independientes, mayormente jóvenes y sin descuento automático de nómina, está en un momento de revisión activa de sus obligaciones financieras: calculan cuánto deben, a quién y cuándo vence, sin desesperación pero con atención real al costo de mantener múltiples créditos. Se les ofrece Compra de Cartera con un enfoque operativo y basado en datos — una sola cuota predecible en lugar de varias, en un entorno donde la tasa BanRep al 12% hace que cada mes de deuda dispersa cueste más de lo necesario. El momento es favorable porque la ventana de prima recién activa genera liquidez puntual que reduce la fricción para iniciar la consolidación sin comprometer el flujo mensual habitual.",
+      "resumen_kpis": [
+        {
+          "etiqueta": "Producto",
+          "valor": "Compra de Cartera",
+          "tipo": "neutro"
+        },
+        {
+          "etiqueta": "Segmento (perfil)",
+          "valor": "Independientes 20-35 años, 98% sin libranza, sensibilidad inflación 0.687",
+          "tipo": "neutro"
+        },
+        {
+          "etiqueta": "Ángulo principal",
+          "valor": "Simplificación operativa del gasto financiero: una cuota, una tasa, una fecha — anclado en datos, no en urgencia emocional",
+          "tipo": "oportunidad"
+        },
+        {
+          "etiqueta": "Canal",
+          "valor": "WhatsApp (principal) → Push (secundario)",
+          "tipo": "neutro"
+        }
+      ],
+      "cambios_estructura": "El análisis provee 3 ángulos diferenciables, por lo que no fue necesario repetir ninguno. Se ordenaron de menor a mayor impacto: el nodo 1 presenta la oportunidad de ventana sin revelar el dato de tasa; el nodo 2 ancla en el beneficio operativo concreto (una sola cuota) que responde la objeción más obvia de alguien sin libranza; el nodo 3 cierra con el dato más fuerte disponible — la tasa BanRep al 12% como costo real y medible de no actuar — para justificar la acción sin presión artificial.",
+      "nodos": [
+        {
+          "dia": 0,
+          "etapa": "confirmacion_curiosidad",
+          "angulo_asignado": "Ventana de prima como momento concreto para revisar cuánto cuestan realmente las deudas actuales — no una promesa de ahorro genérica, sino una invitación a calcular con un dato real a la mano y liquidez reciente disponible.",
+          "canal": "whatsapp"
+        },
+        {
+          "dia": 3,
+          "etapa": "beneficio_concreto",
+          "angulo_asignado": "Para alguien que administra sus pagos sin descuento automático de nómina, manejar varias fechas y cuotas distintas tiene un costo administrativo real. Una sola cuota mensual predecible elimina esa carga operativa — el ángulo es control y simplicidad del flujo, no alivio emocional.",
+          "canal": "push"
+        },
+        {
+          "dia": 7,
+          "etapa": "cierre",
+          "angulo_asignado": "Con la tasa BanRep en 12% — muy por encima de su meta histórica — cada mes que se mantienen múltiples créditos dispersos tiene un costo medible y evitable. El dato concreto de tasa es el argumento de fondo para invitar a iniciar la consolidación ahora, sin urgencia artificial: la ventana y el número hablan solos.",
+          "canal": "whatsapp"
+        }
+      ]
+    },
+    "campana_creada": {
+      "filtro_atributo": {
+        "segmento": 3,
+        "producto_top1": "Compra_cartera"
+      },
+      "nodos": [
+        {
+          "dia": 0,
+          "etapa": "confirmacion_curiosidad",
+          "angulo_asignado": "Ventana de prima como momento concreto para revisar cuánto cuestan realmente las deudas actuales — no una promesa de ahorro genérica, sino una invitación a calcular con un dato real a la mano y liquidez reciente disponible.",
+          "canal": "whatsapp",
+          "copy": {
+            "mensaje": "¿Te llegó la prima? Antes de gastarla, revisa si unificar tus deudas con Colsubsidio te baja la cuota mensual. Vale la pena verlo 👀"
+          },
+          "problemas_gate_l1": [],
+          "veredicto_gate_l2": {
+            "aprobado": false,
+            "problemas": [
+              "El ángulo asignado pide una invitación a *calcular con un dato real* (tasa, cuota concreta), no una promesa genérica de 'te baja la cuota'. El copy dice 'revisa si te baja la cuota' sin anclar ningún dato numérico real — eso es exactamente la promesa de ahorro genérica que el ángulo prohíbe.",
+              "El tono esperado es directo/datos y cifras claras (tasa, cuota). El mensaje no incluye ningún número ni referencia cuantificable; es puramente narrativo y podría aplicar a cualquier producto financiero de cualquier entidad.",
+              "La frase 'antes de gastarla' tiene un matiz levemente condescendiente: asume que el afiliado iba a gastar la prima de forma irresponsable, cuando el dato del segmento no dice eso. Roza el sesgo por situación financiera.",
+              "El mensaje tiene dos ideas comprimidas en la misma oración principal: (1) revisar si conviene unificar y (2) que eso baja la cuota. El canal WhatsApp exige una sola idea por frase para este formato corto.",
+              "El emoji 👀 introduce un tono juguetón que no calza con el tono directo/datos del segmento; en un mensaje de revisión de costos reales se siente fuera de lugar.",
+              "El mensaje tiene 103 caracteres (sin contar llaves JSON), dentro del límite de 160, pero el problema de densidad de ideas y tono persiste independientemente del conteo."
+            ],
+            "sugerencia_breve": "Anclar al menos un dato numérico real (ej. tasa o ahorro estimado en cuota) para cumplir el ángulo de 'calcular con dato real'; separar las ideas en frases distintas; eliminar el emoji y la implicación de gasto irresponsable."
+          }
+        },
+        {
+          "dia": 3,
+          "etapa": "beneficio_concreto",
+          "angulo_asignado": "Para alguien que administra sus pagos sin descuento automático de nómina, manejar varias fechas y cuotas distintas tiene un costo administrativo real. Una sola cuota mensual predecible elimina esa carga operativa — el ángulo es control y simplicidad del flujo, no alivio emocional.",
+          "canal": "push",
+          "copy": {
+            "titulo": "¿Varias deudas? Un solo pago.",
+            "cuerpo": "Únelas en Colsubsidio y ya solo tienes una fecha al mes, un monto fijo — y la cabeza más despejada."
+          },
+          "problemas_gate_l1": [
+            "'titulo' tiene 29 caracteres, fuera del rango 35-50 para push"
+          ],
+          "veredicto_gate_l2": {
+            "aprobado": false,
+            "problemas": [
+              "El cuerpo mezcla dos ideas en una sola oración ('una fecha al mes, un monto fijo — y la cabeza más despejada'), violando la regla de una sola idea por frase.",
+              "El cierre 'la cabeza más despejada' introduce alivio emocional/psicológico, lo que contradice directamente el ángulo asignado (control y simplicidad del flujo, no alivio emocional) y el tono esperado del segmento (directo/datos, no emocional).",
+              "El cuerpo tiene 94 caracteres incluyendo espacios, lo que está dentro del límite, pero la frase compuesta con '—' es síntoma estructural del problema de ideas mezcladas.",
+              "El título tiene 22 caracteres, por debajo del mínimo de 35 para push, lo que puede afectar visibilidad e impacto en el canal."
+            ],
+            "sugerencia_breve": "Separar las dos ideas y eliminar el cierre emocional. El título debe crecer hacia los 35 caracteres mínimos. El cuerpo debe cerrar en un dato operativo concreto (fecha única, monto fijo) sin derivar a estado mental. Ejemplo orientativo — título: '¿Varias cuotas distintas? Unifícalas.' / cuerpo: 'Tráelas a Colsubsidio: una sola fecha al mes, un monto fijo. Eso es todo.'"
+          }
+        },
+        {
+          "dia": 7,
+          "etapa": "cierre",
+          "angulo_asignado": "Con la tasa BanRep en 12% — muy por encima de su meta histórica — cada mes que se mantienen múltiples créditos dispersos tiene un costo medible y evitable. El dato concreto de tasa es el argumento de fondo para invitar a iniciar la consolidación ahora, sin urgencia artificial: la ventana y el número hablan solos.",
+          "canal": "whatsapp",
+          "copy": {
+            "mensaje": "Hola. Varios créditos a la vez significan más intereses de los que necesitas pagar. Colsubsidio los une en uno solo. ¿Lo miramos?"
+          },
+          "problemas_gate_l1": [],
+          "veredicto_gate_l2": {
+            "aprobado": false,
+            "problemas": [
+              "El ángulo asignado exige anclar el argumento en el dato concreto de la tasa BanRep (12%) como razón medible y actual para actuar; el mensaje no menciona ninguna cifra ni tasa, eliminando el elemento diferenciador que justifica la invitación en este momento específico.",
+              "La etapa es 'cierre': se espera un llamado a la acción concreto y resolutivo, no una pregunta abierta e informal ('¿Lo miramos?') que devuelve la iniciativa al usuario sin dirección clara.",
+              "El tono esperado es 'directo/datos': el copy es demasiado vago ('más intereses de los que necesitas pagar') y no ofrece ninguna cifra, cuota ni referencia numérica que respalde la afirmación, incumpliendo la promesa de 'cifras claras'.",
+              "La frase 'más intereses de los que necesitas pagar' es genérica y funcionaría para cualquier campaña de cualquier entidad en cualquier momento; no está anclada al contexto de tasa elevada que da urgencia legítima al ángulo.",
+              "Longitud: el mensaje tiene aproximadamente 105 caracteres, dentro del rango permitido (50-160), pero este punto no compensa los problemas anteriores."
+            ],
+            "sugerencia_breve": "Incluir la referencia a la tasa BanRep (12%) como argumento de fondo, añadir al menos una cifra orientadora (ej. ahorro estimado en cuota o tasa de Colsubsidio) y reemplazar '¿Lo miramos?' por un CTA de cierre directo y concreto, por ejemplo un enlace o instrucción de respuesta."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "clase": 4,
+    "producto": "Compra_cartera",
+    "analisis": {
+      "angulos_disponibles": [
+        {
+          "senal": "Tasa BanRep alta + atractivo compra de cartera",
+          "dato_concreto": "Tasa BanRep 12%, muy sobre la meta; atractivo de compra de cartera calificado como alto en el vector de interés del segmento",
+          "por_que_importa": "Un profesional establecido en este rango de edad (46-55 años) probablemente acumula varias obligaciones de crédito adquiridas en distintos momentos del ciclo BanRep. Con una tasa de referencia en 12%, esas deudas existentes pueden estar costando más de lo necesario. El ángulo real es la oportunidad de simplificar y abaratar lo que ya se debe -- no de adquirir algo nuevo."
+        },
+        {
+          "senal": "Ventana de prima + consolidación",
+          "dato_concreto": "Ventana para compra de cartera: usar el efectivo extra de la prima para consolidar",
+          "por_que_importa": "La prima de mitad de año representa un flujo de efectivo puntual y previsible. Para alguien sin grupo familiar dependiente (54.4% sin grupo familiar), ese dinero no está absorbido automáticamente por gastos de hogar compartidos. El ángulo es la prima como palanca de acción: el momento para iniciar la consolidación es ahora, cuando hay liquidez disponible para el primer pago o para cubrir el proceso, no en un momento de aprieto."
+        },
+        {
+          "senal": "Feria de Vivienda Colsubsidio julio 2026",
+          "dato_concreto": "Feria de Vivienda Colsubsidio: 24, 25 y 26 de julio de 2026, Club El Cubo Colsubsidio, Bogotá (Teusaquillo)",
+          "por_que_importa": "El interés dominante del segmento es vivienda/libre inversión aspiracional. La feria es un evento real e inmediato de Colsubsidio que conecta con esa aspiración. El puente lógico: consolidar deudas actuales mediante compra de cartera mejora el perfil de capacidad de pago -- lo que en la práctica allana el camino hacia una futura gestión de vivienda. El ángulo no es 'compra vivienda hoy' sino 'ordena tus finanzas ahora para que el sueño de vivienda no se detenga por una carga de deudas dispersas'."
+        }
+      ],
+      "estado_mental": "Una persona en este punto de su trayectoria -- más de cuatro décadas de vida, probablemente con años de vida laboral acumulada y sin dependientes directos -- tiende a mirar sus finanzas desde la perspectiva del orden y la consolidación, no de la urgencia de supervivencia. Lo que ocupa su mente es más probable que sea '¿estoy pagando más de lo que debería por deudas que ya tengo?' que 'necesito dinero ya'. Eso lo hace receptivo a un argumento racional y de optimización, y menos receptivo a mensajes de escasez o de promesa de un futuro distante.",
+      "justificacion_producto": "Compra de cartera encaja con este segmento porque el perfil sugiere acumulación de obligaciones a lo largo de una trayectoria profesional consolidada, no una emergencia de liquidez. Con tasa BanRep en 12%, las deudas vigentes adquiridas en distintos momentos pueden tener condiciones subóptimas. La prima activa una ventana concreta de acción. Y la aspiración de vivienda -- interés dominante del segmento -- no desaparece: ordenar la carga de deuda actual es el paso previo lógico a cualquier movimiento financiero importante. Compra de cartera no compite con esa aspiración; la habilita."
+    },
+    "plan": {
+      "resumen": "Este segmento (46-55 años, mayoría sin grupo familiar dependiente) mira sus finanzas desde el orden y la optimización: la pregunta que ya se están haciendo es si están pagando más de lo necesario por deudas acumuladas a lo largo de su trayectoria profesional. Se les ofrece Compra de Cartera como una herramienta de consolidación racional — simplificar y abaratar lo que ya deben, no adquirir algo nuevo — con la prima de mitad de año como palanca de acción concreta. El cierre se ancla en la Feria de Vivienda de julio 2026: ordenar la carga de deuda hoy es el paso previo lógico para que la aspiración de vivienda no se frene por obligaciones dispersas.",
+      "resumen_kpis": [
+        {
+          "etiqueta": "Producto",
+          "valor": "Compra de Cartera",
+          "tipo": "neutro"
+        },
+        {
+          "etiqueta": "Segmento (perfil)",
+          "valor": "46-55 años, ~54% sin grupo familiar dependiente",
+          "tipo": "neutro"
+        },
+        {
+          "etiqueta": "Ángulo principal",
+          "valor": "Consolidación y optimización de deuda existente (tasa BanRep 12%)",
+          "tipo": "oportunidad"
+        },
+        {
+          "etiqueta": "Canal",
+          "valor": "WhatsApp (principal) + Push (secundario)",
+          "tipo": "neutro"
+        }
+      ],
+      "cambios_estructura": "null",
+      "nodos": [
+        {
+          "dia": 0,
+          "etapa": "confirmacion_curiosidad",
+          "angulo_asignado": "Tasa BanRep 12% + optimización de deuda existente: presentar la idea de que las deudas acumuladas en distintos momentos del ciclo pueden estar costando más de lo necesario hoy — sin pedir acción todavía, solo activar la pregunta '¿estoy pagando de más?'",
+          "canal": "whatsapp"
+        },
+        {
+          "dia": 3,
+          "etapa": "beneficio_concreto",
+          "angulo_asignado": "Ventana de prima de mitad de año como palanca de acción: la prima es un flujo de efectivo puntual que, sin dependientes que lo absorban, puede usarse para iniciar la consolidación ahora — cuando hay liquidez disponible — y no en un momento de aprieto",
+          "canal": "push"
+        },
+        {
+          "dia": 7,
+          "etapa": "cierre",
+          "angulo_asignado": "Feria de Vivienda Colsubsidio (24-26 julio 2026, Club El Cubo): consolidar deudas dispersas mediante compra de cartera mejora el perfil de capacidad de pago — el paso concreto para que la aspiración de vivienda no se detenga por una carga de obligaciones desorganizadas. Invitar a iniciar el proceso antes de la feria",
+          "canal": "whatsapp"
+        }
+      ]
+    },
+    "campana_creada": {
+      "filtro_atributo": {
+        "segmento": 4,
+        "producto_top1": "Compra_cartera"
+      },
+      "nodos": [
+        {
+          "dia": 0,
+          "etapa": "confirmacion_curiosidad",
+          "angulo_asignado": "Tasa BanRep 12% + optimización de deuda existente: presentar la idea de que las deudas acumuladas en distintos momentos del ciclo pueden estar costando más de lo necesario hoy — sin pedir acción todavía, solo activar la pregunta '¿estoy pagando de más?'",
+          "canal": "whatsapp",
+          "copy": {
+            "mensaje": "Hola 👋 Una deuda de hace dos años probablemente ya te costó más de lo que pensabas. ¿Y si revisamos si puedes pagar menos desde hoy?"
+          },
+          "problemas_gate_l1": [],
+          "veredicto_gate_l2": {
+            "aprobado": false,
+            "problemas": [
+              "1. DESVÍO DE ÁNGULO: El copy salta directo a proponer acción ('¿Y si revisamos...?'), cuando la etapa asignada es confirmación_curiosidad — solo activar la pregunta interna '¿estoy pagando de más?' SIN llamar a ninguna acción todavía.",
+              "2. TONO INCORRECTO PARA EL SEGMENTO: El tono esperado es aspiracional (vivienda como símbolo de estabilidad/realización). El copy suena genérico-utilitario ('pagar menos'), sin ningún vínculo con ese eje emocional ni con la narrativa de proyecto de vida.",
+              "3. FRASE CON DOS IDEAS MEZCLADAS: 'Una deuda de hace dos años probablemente ya te costó más de lo que pensabas. ¿Y si revisamos si puedes pagar menos desde hoy?' mezcla el diagnóstico pasado con la propuesta de acción presente en un solo bloque, violando la regla de una sola idea por frase/mensaje.",
+              "4. GANCHO GENÉRICO/RELLENO IA: 'Hola 👋' como apertura es fórmula repetida y vacía. 'probablemente ya te costó más de lo que pensabas' es vago y aplicable a cualquier segmento sin dato ni contexto específico.",
+              "5. LÍMITE DE CARACTERES: El mensaje tiene ~105 caracteres, dentro del rango WhatsApp (50-160). Este punto no es problema.",
+              "6. NO MENCIONA COLSUBSIDIO NI EL PRODUCTO: Para WhatsApp en etapa de curiosidad es tolerable no nombrarlo explícitamente, pero combinado con los demás problemas refuerza la sensación de mensaje genérico sin origen claro."
+            ],
+            "sugerencia_breve": "Reescribir enfocado solo en sembrar la pregunta interna, sin CTA. Anclar al tono aspiracional (ej. el crédito de tu casa / el esfuerzo que representa) y dejar que el mensaje cierre con la duda activa, no con una invitación a actuar. Ejemplo de dirección: algo que evoque 'ese crédito que tomaste para tu hogar puede estar costándote más hoy de lo que costaba cuando lo firmaste — vale la pena preguntárselo.'"
+          }
+        },
+        {
+          "dia": 3,
+          "etapa": "beneficio_concreto",
+          "angulo_asignado": "Ventana de prima de mitad de año como palanca de acción: la prima es un flujo de efectivo puntual que, sin dependientes que lo absorban, puede usarse para iniciar la consolidación ahora — cuando hay liquidez disponible — y no en un momento de aprieto",
+          "canal": "push",
+          "copy": {
+            "titulo": "Usa tu prima para unificar tus deudas",
+            "cuerpo": "Ya tienes la plata extra -- aprovéchala para juntar todo en un solo pago antes de que el mes apriete."
+          },
+          "problemas_gate_l1": [],
+          "veredicto_gate_l2": {
+            "aprobado": false,
+            "problemas": [
+              "1. DESVIACIÓN DE ÁNGULO: El copy omite completamente la palanca estratégica asignada — que la prima es una ventana de liquidez puntual ideal para iniciar consolidación AHORA, antes de un momento de aprieto. El cuerpo lo menciona tangencialmente ('antes de que el mes apriete'), pero lo reduce a urgencia genérica de fin de mes, no al razonamiento de oportunidad-de-liquidez-sin-dependientes que es el núcleo del ángulo.",
+              "2. TONO INCORRECTO: El tono esperado es aspiracional (vivienda como estabilidad/realización). El copy es 100% utilitario/defensivo ('antes de que el mes apriete', 'la plata extra'). No hay ningún elemento aspiracional ni proyección positiva hacia adelante. Contradice directamente el hallazgo Raddar asignado al segmento.",
+              "3. GENÉRICO Y DESCONECTADO DEL SEGMENTO: 'Ya tienes la plata extra' y 'juntar todo en un solo pago' son frases que funcionarían para cualquier segmento en cualquier campaña de compra de cartera. No hay ningún anclaje a las características del receptor (sin dependientes, liquidez disponible, perfil aspiracional).",
+              "6. FORMATO — TÍTULO FUERA DE LÍMITE: 'Usa tu prima para unificar tus deudas' tiene 38 caracteres, dentro del rango permitido (35-50). ✓ El cuerpo 'Ya tienes la plata extra -- aprovéchala para juntar todo en un solo pago antes de que el mes apriete.' tiene 101 caracteres, dentro del rango (80-120). ✓ Sin embargo, el cuerpo mezcla DOS ideas en una sola oración: (a) aprovechar la liquidez disponible y (b) el riesgo de que el mes apriete — viola la regla de una sola idea por frase.",
+              "4. RIESGO LEVE DE CONDESCENDENCIA: La frase 'la plata extra' puede sonar infantilizante o coloquial en exceso para un segmento con perfil aspiracional; el segmento no necesita que se le explique qué es la prima en términos tan básicos."
+            ],
+            "sugerencia_breve": "Reescribir alineando tono aspiracional y ángulo de oportunidad: el título debe evocar avance/estabilidad (no solo 'unificar deudas'), y el cuerpo debe articular que la prima es el momento ideal para consolidar y liberar capacidad — no como defensa ante el aprieto del mes, sino como movimiento inteligente desde una posición de liquidez. Separar las dos ideas en frases distintas."
+          }
+        },
+        {
+          "dia": 7,
+          "etapa": "cierre",
+          "angulo_asignado": "Feria de Vivienda Colsubsidio (24-26 julio 2026, Club El Cubo): consolidar deudas dispersas mediante compra de cartera mejora el perfil de capacidad de pago — el paso concreto para que la aspiración de vivienda no se detenga por una carga de obligaciones desorganizadas. Invitar a iniciar el proceso antes de la feria",
+          "canal": "whatsapp",
+          "copy": {
+            "mensaje": "Hola 👋 La Feria de Vivienda es el 24 de julio — unificar tus deudas antes puede dejarte con más cupo disponible. ¿Le damos?"
+          },
+          "problemas_gate_l1": [],
+          "veredicto_gate_l2": {
+            "aprobado": false,
+            "problemas": [
+              "El mensaje no sigue el ángulo asignado: el ángulo es aspiracional (vivienda como realización/estabilidad) y la compra de cartera como paso concreto para no detener ese sueño. El copy reduce el beneficio a 'más cupo disponible', que es un beneficio técnico/funcional, no aspiracional. Se pierde completamente el vínculo emocional con la meta de vivienda.",
+              "El tono no calza con el segmento: 'aspiracional' requiere un lenguaje que evoque logro, estabilidad o un futuro concreto. '¿Le damos?' es coloquial hasta el punto de trivializar una decisión financiera de alto impacto para el segmento.",
+              "El mensaje no menciona el producto (Compra de Cartera / compra_cartera) ni de forma implícita lo hace reconocible. 'Unificar tus deudas' es genérico y podría referirse a cualquier producto de consolidación de cualquier entidad.",
+              "La frase 'más cupo disponible' mezcla dos conceptos en una sola idea (unificar deudas → cupo), lo que comprime la lógica del beneficio sin explicarla, pero además el beneficio prometido (cupo) no es el beneficio central del ángulo (capacidad de pago / perfil ordenado para acceder a vivienda).",
+              "Revisión de caracteres WhatsApp (límite 50-160): el mensaje tiene aproximadamente 104 caracteres sin emoji, dentro del rango. Este punto no es un problema, pero los anteriores sí invalidan el copy.",
+              "No se menciona Colsubsidio en el mensaje. En WhatsApp, donde el remitente puede no ser evidente de inmediato, omitir la marca deja el mensaje sin anclaje institucional."
+            ],
+            "sugerencia_breve": "Reescribir con tono aspiracional: nombrar la meta (tu vivienda, ese paso que quieres dar), conectar la compra de cartera de Colsubsidio como el orden que habilita ese paso antes de la Feria del 24 de julio, y cerrar con una CTA que invite a actuar —no a trivializar la decisión."
+          }
+        }
+      ]
+    }
+  }
+]

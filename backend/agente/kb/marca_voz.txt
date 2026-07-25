@@ -1,0 +1,28 @@
+KNOWLEDGE BASE — MARCA Y VOZ DE COLSUBSIDIO
+
+VERIFICADO (fuente real, no inventado):
+- Tagline de marca: "Te lo mereces" — descrito como una promesa de marca sencilla, contundente
+  y altamente humanista. Es el ancla real de tono: Colsubsidio no vende, reconoce y acompaña.
+- Colsubsidio se posiciona como quien YA conoce al afiliado (décadas de relación: dónde trabaja,
+  qué servicios usa, su composición familiar) — el tono correcto es el de alguien que ya te
+  conoce, no el de un vendedor que te acaba de descubrir.
+
+NO VERIFICADO — extensión razonada del tagline, marcada como tal, no como manual oficial de
+marca confirmado (no existe un brand book público de Colsubsidio disponible para este proyecto):
+- Tuteo con "tú", español neutro colombiano (consistente con el resto del sistema).
+- Cercano y humano, nunca corporativo/frío ni de venta agresiva — "Te lo mereces" es una frase
+  de reconocimiento, no de urgencia de venta.
+- Colsubsidio siempre en mayúscula inicial simple: "Colsubsidio" (nunca "COLSUBSIDIO" ni
+  variaciones).
+- Emojis: uso moderado, nunca más de 1 por mensaje, con propósito claro — Colsubsidio es una
+  caja de compensación familiar, no una fintech juvenil; el tono cercano no debe leerse como
+  informal al punto de perder seriedad institucional.
+
+REGLA DE TONO TRANSVERSAL (deriva directo del tagline):
+El copy nunca debe sonar a "te estamos vendiendo algo que no sabíamos que necesitabas" — debe
+sonar a "sabemos esto de ti, y por eso pensamos en esto para ti". La diferencia es sutil pero
+constante: reconocimiento primero, producto después, nunca al revés.
+
+  ❌ "¡Tenemos el crédito perfecto para ti! No lo dejes pasar."
+  ✅ "Sabemos que este es tu momento de [algo real del segmento] — por eso pensamos en ti para
+     esto."
