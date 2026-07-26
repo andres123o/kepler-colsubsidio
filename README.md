@@ -1,59 +1,71 @@
 # Kepler para Colsubsidio — Hackathon Colsubsidio × 30X (Reto 1: Crédito Hiperpersonalizado)
 
-**Qué hacemos:** convertimos los 1.6M afiliados de Colsubsidio, hoy tratados con la misma oferta
-de crédito por el mismo canal, en 1.6M ofertas distintas — qué producto, con qué monto, por qué
-canal y en qué momento — con una segmentación estadística real (no caja negra) que combina lo que
-Colsubsidio ya sabe de cada afiliado con señal de mercado citada de fuente real, y un agente que
-solo se encarga de redactar el mensaje, nunca de decidir el crédito.
+**Qué hacemos:** alimentamos los datos de Colsubsidio (dummy para este demo — ver §2 sobre por qué)
+con enriquecimiento real de patrones de comportamiento, intereses de redes y momento de mercado, y
+los transformamos en microsegmentos. Después seleccionamos qué microsegmentos son viables para qué
+producto de crédito, y con eso construimos una **estrategia de campaña completa** — no un solo
+mensaje, sino un ciclo de mensajes distribuidos en varios días pensado para subir la probabilidad de
+conversión — que ejecutamos directamente en **Salesforce Marketing Cloud**.
 
-**Acceso a la demo:** `http://localhost:3000` (o la URL de Vercel) → usuario `admin@colsubsidio.com`
-/ contraseña `admin2024`.
+**Demo en producción:** https://kepler-colsubsidio-fronted.vercel.app/login → usuario
+`admin@colsubsidio.com` / contraseña `admin2024`. (Para correrlo en local, ver §6.)
 
 ---
 
 ## 1. El problema y cómo lo resolvemos
 
-Colsubsidio tiene **1.6M afiliados, 73% potenciales para crédito, solo 16% de penetración**. Hoy
-casi todos reciben la misma oferta por el mismo canal. Nuestra solución tiene tres piezas, cada una
-resolviendo una parte distinta del problema:
+Colsubsidio tiene **1.6M afiliados reales, 73% potenciales para crédito, solo 16% de penetración**
+(cifra oficial del reto — no del dataset dummy que usamos para construir y demostrar el sistema,
+ver §2). Hoy casi todos reciben la misma oferta por el mismo canal. Nuestra solución tiene tres
+piezas, cada una resolviendo una parte distinta del problema:
 
-1. **Segmentación estadística real (MCA + Latent Class Analysis)** sobre los datos reales de
-   afiliados que sí nos entregó Colsubsidio, para agrupar afiliados en perfiles de comportamiento
-   con base matemática, no reglas a mano.
+1. **Segmentación estadística (MCA + Latent Class Analysis)** sobre un dataset dummy con la misma
+   forma y volumen que tendría el dato real (ver §2 — Colsubsidio no entregó data real de crédito
+   para este reto), para agrupar afiliados en perfiles de comportamiento con base matemática, no
+   reglas a mano.
 2. **Enriquecimiento con datos externos reales** (comportamiento digital, macroeconomía, calendario,
-   intereses de consumo) para completar lo que el dataset entregado no tenía — el reto exige
-   combinar perfil **y** comportamiento, y no autoriza usar buró de crédito (DataCrédito).
+   intereses de consumo) para completar lo que el dataset dummy no tiene — el reto exige combinar
+   perfil **y** comportamiento, y no autoriza usar buró de crédito (DataCrédito).
 3. **Un scorer transparente** que decide producto + monto + canal + momento con razones nombradas
-   y cuantificadas (no SHAP pegado a una red neuronal), y un **agente Claude de 4 pasos** que solo
-   redacta el mensaje final — la decisión de crédito nunca es generativa.
+   y cuantificadas (no SHAP pegado a una red neuronal), y un **sistema agéntico granular con 4
+   tareas distribuidas entre varios agentes especializados** — no un solo agente que hace todo —
+   que redacta y ejecuta la campaña; la decisión de crédito nunca es generativa.
 
 ---
 
-## 2. Los datos: qué nos dio Colsubsidio, qué es real y qué es simulado
+## 2. Los datos: por qué son dummy, y qué sí es real
 
-**Lo que Colsubsidio entregó es real**, no un dataset genérico: `Usos_Productos_Afiliados_SIN_ID.csv`
-(`backend/data/raw/`), **1,566,026 filas** de afiliados reales anonimizados (sin cédula). Pero **no
-es data de crédito** — el reto se llama "Crédito Hiperpersonalizado" y sin embargo lo que nos dieron
-es un snapshot demográfico y de uso de *otros* servicios de Colsubsidio: género, rango de edad,
+**El dataset que usamos para construir y demostrar todo el sistema es dummy/ficticio — no es data
+real de producción de Colsubsidio.** Para el Reto 1 (Crédito Hiperpersonalizado) no nos entregaron
+data real: la información de crédito de sus afiliados es sensible y no se comparte en un
+hackathon. Lo que sí vimos viable fue reutilizar el dataset del **reto de seguros** del mismo
+hackathon — tiene la misma forma de afiliado (demográficos + uso de servicios) que necesitábamos
+para construir y probar un motor de personalización — así que lo adaptamos como base **dummy** para
+simular el reto de crédito con un volumen y una estructura de dato realistas.
+
+`Usos_Productos_Afiliados_SIN_ID.csv` (`backend/data/raw/`) — **1,566,026 filas dummy** (ninguna
+corresponde a una persona real ni a un crédito real), con columnas: género, rango de edad,
 categoría de ingreso (A/B/C), segmento de grupo familiar, empresa, ciudad, y flags de uso de
 droguería, Piscilago, hoteles, agencias y vivienda. **No hay historial de crédito, ni fechas, ni
-tenencia de producto, ni variable objetivo** — es información de quién es el afiliado y qué otros
-servicios de Colsubsidio usa, no de su comportamiento crediticio.
+tenencia de producto, ni variable objetivo** en estas columnas — por eso el problema es de
+segmentación no supervisada + capa de decisión, no de forecasting.
 
-Verificamos empíricamente cada columna sobre las 1,566,026 filas completas (no una muestra) antes
-de decidir qué hacer con ella:
+Aun siendo dummy, corrimos el análisis exploratorio completo sobre las 1,566,026 filas (no una
+muestra), porque la metodología (MCA/LCA, elección de K, etc.) tiene que sostenerse igual el día
+que Colsubsidio conecte data real:
 
-| Columna | Lo que encontramos | Qué hicimos con eso |
+| Columna | Lo que encontramos (sobre el dataset dummy) | Qué hicimos con eso |
 |---|---|---|
 | `CATEGORIA` (ingreso) | 75.9% de la base cae en la misma categoría (A) | El monto no puede ser el eje de personalización para la mayoría → el eje real es producto/canal/momento |
 | `HOTELES` / `AGENCIAS` / `VIVIENDA` | Señal positiva en menos del 0.1% de filas | Sin masa para segmentar, pero sí sirven como regla de alta confianza cuando aparecen (ej. `VIVIENDA=SI` dispara oferta de vivienda con certeza) |
-| `DROGUERIA` / `PISCILAGO` | Señal real en ~5-6% de filas | Sí entran como eje de la segmentación |
+| `DROGUERIA` / `PISCILAGO` | Señal en ~5-6% de filas | Sí entran como eje de la segmentación |
 | `ESTADOAFILIADO` | 100% constante ("Al día") | Fuera del modelo, no aporta nada |
 
-Como el reto **exige** combinar el perfil del afiliado con señal de comportamiento que el dataset no
-traía, y **prohíbe** usar buró de crédito externo (DataCrédito/CIFIN — Ley 1266/2008), enriquecimos
-cada segmento (nunca cada persona individual) con cuatro familias de datos externos reales y
-citables — no inventados:
+Como el reto **exige** combinar el perfil del afiliado con señal de comportamiento que el dataset
+dummy no trae, y **prohíbe** usar buró de crédito externo (DataCrédito/CIFIN — Ley 1266/2008),
+enriquecimos cada segmento (nunca cada persona individual) con cuatro familias de datos externos
+**reales y citables** — estas sí son fuente real, no dummy, y son las que de verdad generan la
+personalización:
 
 | Familia | Fuente real | Qué aporta |
 |---|---|---|
@@ -62,17 +74,17 @@ citables — no inventados:
 | Macroeconomía | Banco de la República (tasa de política 12%), DANE (inflación, Ley de Engel por nivel de ingreso) | Cuánto se prioriza crédito rotativo/consolidación de deudas según el momento |
 | Calendario de demanda | Prima legal (Art. 306 CST), calendario escolar/universitario real de Colombia | Cuándo es el mejor momento para cada producto |
 
-Cada afiliado hereda estas cuatro tablas **por segmento vía membresía estadística suave**
-(`θ_i = Σ_k π_ik · θ_k`, shrinkage bayesiano estilo James-Stein) — no se inventa un dato por
-persona; se hereda el perfil agregado, matemáticamente correcto, del segmento al que pertenece con
-cierta probabilidad. Detalle completo, con cada cifra y su fuente, en `cnoslidado-estrategia.md`
-§5.2.
+Cada afiliado (dummy en esta demo, real el día que Colsubsidio conecte su data) hereda estas cuatro
+tablas **por segmento vía membresía estadística suave** (`θ_i = Σ_k π_ik · θ_k`, shrinkage
+bayesiano estilo James-Stein) — no se inventa un dato por persona; se hereda el perfil agregado,
+matemáticamente correcto, del segmento al que pertenece con cierta probabilidad. Detalle completo,
+con cada cifra y su fuente, en `cnoslidado-estrategia.md` §5.2.
 
-**Lo único simulado, y declarado como tal, es la demo en vivo:** como las cédulas del CSV son
-anónimas, para la demo generamos perfiles sintéticos muestreando de las condicionales reales de cada
-segmento (estadísticamente consistentes, no aleatorios) — la interfaz `enrich(cédula) → {señales}`
-es idéntica entre el simulador de hoy y un conector real de producción. En producción con
-Colsubsidio esto se resolvería con datos de consentimiento real (Tier 1, ver §5), no con simulación.
+**Para la demo en vivo, generamos perfiles sintéticos** muestreando de las condicionales de cada
+segmento (estadísticamente consistentes con el perfil, no aleatorios al azar) — la interfaz
+`enrich(cédula) → {señales}` es idéntica entre el simulador de hoy y un conector real de
+producción. El día que Colsubsidio conecte su data real de afiliados y crédito (ver §5), el mismo
+pipeline corre sin cambiar código — solo cambia la fuente del dato de entrada.
 
 ---
 
@@ -97,13 +109,15 @@ Scripts: `backend/pipeline/03_lca.py` → `03a_buscar_k_extendido.py` → `03b_a
 **Selección de K, con evidencia, no a ojo:** se probó K=4 a 20, comparando BIC, SABIC y entropía
 relativa (los tres nativos de StepMix). K=7 y todo K≥14 **no convergieron** (tope de iteraciones) —
 sus métricas no son comparables. **K=12 es el candidato más alto que convergió limpio**, con
-entropía 0.939 (alta separación entre clases). Ajuste final de producción sobre las **1,566,026
-filas completas**: 51.6 minutos reales, convergencia confirmada, `random_state=42` fijo
-(reproducible). Las 12 clases resultantes van de 13.5% a 1.3% de la base, ninguna degenerada.
-Tabla completa de resultados por K y perfil de las 12 clases en `cnoslidado-estrategia.md` §5.1.1.
+entropía 0.939 (alta separación entre clases). Ajuste final sobre las **1,566,026 filas completas
+del dataset dummy** (no una muestra): 51.6 minutos reales de cómputo, convergencia confirmada,
+`random_state=42` fijo (reproducible) — la misma corrida y los mismos tiempos que tomaría sobre
+data real de igual tamaño. Las 12 clases resultantes van de 13.5% a 1.3% de la base, ninguna
+degenerada. Tabla completa de resultados por K y perfil de las 12 clases en
+`cnoslidado-estrategia.md` §5.1.1.
 
 **Modelo guardado:** `backend/data/processed/lca_modelo.pkl.gz` (parámetros del modelo) y
-`lca_pi.pkl.gz` (membresía π_i por afiliado, anonimizada con un número de serie correlativo, sin
+`lca_pi.pkl.gz` (membresía π_i por afiliado dummy, con un número de serie correlativo en vez de
 cédula). Comprimidos porque sin comprimir pesan 143-165MB (GitHub rechaza archivos >100MB).
 
 **El scorer, glass-box, no una caja negra con explicación pegada encima:**
@@ -119,33 +133,34 @@ Colsubsidio (Decreto 1072/2015, categoría A/B/C → SMMLV → tope de monto), a
 
 ---
 
-## 4. El sistema agéntico: 4 pasos, con techo de vidrio explícito
+## 4. El sistema agéntico: granular, con tareas distribuidas, no un solo agente
 
 **Frontera de explicabilidad, no negociable:** el scorer de arriba decide **qué** ofrecer (producto,
-monto, canal, razones) de forma 100% transparente. El agente Claude **solo** decide **cómo**
+monto, canal, razones) de forma 100% transparente. El sistema de agentes **solo** decide **cómo**
 comunicarlo — nunca recalcula ni la oferta ni el monto.
 
-Pipeline de 4 llamadas encadenadas (mismo patrón *prompt chaining* usado en el resto de Kepler,
-implementado en `backend/agente/orquestador.py`, `claude_client.py`, `perplexity_client.py`,
-`prompts.py`):
+**No es un solo agente haciendo todo el trabajo — es un sistema agéntico granular, con la tarea
+repartida en 4 agentes especializados que trabajan en cadena** (patrón *prompt chaining*,
+orquestado en `backend/agente/orquestador.py`):
 
-1. **Analista de segmento** — Perplexity busca contexto/actualidad real del grupo (temporada,
-   tendencia de categoría).
-2. **Planificador de cadencia** — Claude reparte los ángulos entre 3 mensajes espaciados (día 0,
+1. **Agente analista de segmento** — investiga contexto/actualidad real del grupo (temporada,
+   tendencia de categoría) con un motor de research de mercado en tiempo real.
+2. **Agente planificador de cadencia** — reparte los ángulos entre 3 mensajes espaciados (día 0,
    día 3, día 7) sin repetir el mismo dato entre nodos.
-3. **Copywriter** — Claude escribe el copy de los 3 mensajes siguiendo exactamente el plan.
-4. **Humanizador** — Claude pule el tono para que suene natural, no corporativo.
+3. **Agente copywriter** — escribe el copy de los 3 mensajes siguiendo exactamente el plan que le
+   entregó el agente anterior.
+4. **Agente humanizador** — pule el tono para que suene natural, no corporativo.
 
-Después de las 4 llamadas: **gate L1** (`backend/agente/validador.py` — reglas determinísticas,
-límites de caracteres por canal, una idea por frase, sin costo de LLM) y **gate L2** (Claude como
-juez de calidad sobre el resultado final). Nada se envía sin pasar ambos gates.
+Después de las 4 tareas: **gate L1** (`backend/agente/validador.py` — reglas determinísticas,
+límites de caracteres por canal, una idea por frase, sin costo de cómputo extra) y **gate L2** (un
+agente juez de calidad revisa el resultado final). Nada se envía sin pasar ambos gates.
 
 **Por qué la demo corre en modo mock** (`MODO_MOCK = True` en `backend/agente/orquestador.py`): el
-reto exige demo en vivo sin video de respaldo. El pipeline real (Perplexity + Claude) funciona —
-probado en vivo el 25-jul-2026 — pero tiene un modo de falla real bajo presión de tiempo (el
-copywriter puede devolver texto cortado). El contenido mock (`datos_mock.py`) no es relleno
-genérico: está escrito a mano con las mismas reglas del pipeline real y pasa el mismo gate L1. Para
-volver a modo real: `MODO_MOCK = False`, la interfaz no cambia.
+reto exige demo en vivo sin video de respaldo. El pipeline real de agentes funciona — probado en
+vivo el 25-jul-2026 — pero tiene un modo de falla real bajo presión de tiempo (el agente copywriter
+puede devolver texto cortado). El contenido mock (`datos_mock.py`) no es relleno genérico: está
+escrito a mano con las mismas reglas del pipeline real y pasa el mismo gate L1. Para volver a modo
+real: `MODO_MOCK = False`, la interfaz no cambia.
 
 ---
 
@@ -193,9 +208,10 @@ el pitch en vez de aparentar que ya está conectado.
 
 ---
 
-## 6. Cómo correrlo (< 5 minutos)
+## 6. Cómo correrlo en local (< 5 minutos)
 
-Requiere Python 3.12+ y Node 20+. Dos terminales, backend y frontend por separado.
+La demo en producción ya está en el link de arriba. Para correrlo en local: requiere Python 3.12+ y
+Node 20+, dos terminales, backend y frontend por separado.
 
 ### Backend
 
@@ -216,7 +232,7 @@ npm install
 npm run dev
 ```
 
-### Acceder a la demo
+### Acceder a la demo en local
 
 Abrir `http://localhost:3000` →
 
@@ -226,9 +242,10 @@ Abrir `http://localhost:3000` →
 ### Variables de entorno
 
 **Backend** (`backend/.env`, ver `backend/.env.example`):
-- `ANTHROPIC_API_KEY` — clave de Claude. No se llama mientras `MODO_MOCK=True`, pero debe estar
-  puesta para el día que se apague el modo mock.
-- `PERPLEXITY_API_KEY` — clave de Perplexity, mismo caso.
+- `ANTHROPIC_API_KEY` — clave del proveedor de LLM que corre el sistema de agentes. No se llama
+  mientras `MODO_MOCK=True`, pero debe estar puesta para el día que se apague el modo mock.
+- `PERPLEXITY_API_KEY` — clave del motor de research de mercado en tiempo real que usa el agente
+  analista de segmento, mismo caso.
 
 **Frontend** (`frontend/.env.local`):
 - `NEXT_PUBLIC_BACKEND_URL` — local: `http://localhost:8000`.
@@ -243,17 +260,18 @@ colsubsidio/
     app/
       routers/       — FastAPI: productos, campanas, kb, sugerencias
       services/       — eventos.py
-    agente/           — motor agéntico: orquestador (pipeline + MODO_MOCK), claude_client,
-                       perplexity_client, prompts, validador (gate L1), datos_mock,
+    agente/           — motor agéntico: orquestador (pipeline de 4 agentes + MODO_MOCK), clientes
+                       de LLM y de research de mercado, prompts, validador (gate L1), datos_mock,
                        salesforce_client (real) / salesforce_simulado (demo)
     motor/            — scorer_persona.py (scorer aditivo glass-box + elegibilidad)
     pipeline/         — 01_limpieza → 02_mca → 03_lca → 03a/03b (ajuste K=12) → 04-11
                        (perfiles, canal, interés, macro, calendario, estilo por clase) — scripts de
                        uso único, ya corridos, no parte de la app en producción
     data/
-      raw/            — Usos_Productos_Afiliados_SIN_ID.csv (dataset real, NUNCA se commitea)
-      processed/      — lca_modelo.pkl.gz / lca_pi.pkl.gz (modelo LCA real ya entrenado),
-                       tamano_clases.json
+      raw/            — Usos_Productos_Afiliados_SIN_ID.csv (dataset dummy usado en la demo, no
+                       se commitea — ver §2 y §9)
+      processed/      — lca_modelo.pkl.gz / lca_pi.pkl.gz (modelo LCA ya entrenado sobre el
+                       dataset dummy), tamano_clases.json
       theta_k/        — las 4 tablas exógenas por clase (canal, interés, macro, calendario) +
                        estilo de comunicación
     pruebas/          — validación con personas sintéticas y reales, uso único
@@ -287,11 +305,14 @@ proyecto):
 
 ## 9. Notas de seguridad y regulación
 
-El dataset que entregó Colsubsidio es de afiliados reales anonimizados. **Nunca se commitea al
-repo** (`.gitignore` bloquea `*.csv` crudos, `data/raw/`, `data/real/`, `data_limpia.pkl`). El
-tratamiento de esta data interna está cubierto por el aviso de privacidad vigente de Colsubsidio
-(autoriza uso para "ofertas y promociones", Ley 1581/2012 + Decreto 1377/2013). Los `.pkl.gz` del
-modelo LCA sí se suben (son parámetros del modelo, no datos por persona); las probabilidades
-reales por afiliado (`lca_pi.pkl.gz`) están anonimizadas con un número de serie correlativo, sin
-cédula. Nunca se usa buró de crédito externo (DataCrédito/CIFIN) — prohibido explícitamente por el
-reto y por la Ley 1266/2008.
+El dataset `Usos_Productos_Afiliados_SIN_ID.csv` usado en este repo es **dummy/ficticio** (ver §2)
+— no corresponde a afiliados reales de Colsubsidio ni contiene PII real. Aun así, **nunca se
+commitea al repo** (`.gitignore` bloquea `*.csv` crudos, `data/raw/`, `data/real/`,
+`data_limpia.pkl`), con la misma disciplina que tendría el repo el día que se conecte con data real
+de producción. Los `.pkl.gz` del modelo LCA sí se suben (son parámetros del modelo entrenado sobre
+el dataset dummy, no datos por persona); las probabilidades por afiliado (`lca_pi.pkl.gz`) usan un
+número de serie correlativo en vez de cédula. El día que Colsubsidio conecte su data real de
+afiliados y crédito, ese tratamiento quedaría cubierto por su aviso de privacidad vigente (autoriza
+uso de data interna para "ofertas y promociones", Ley 1581/2012 + Decreto 1377/2013). Nunca se usa
+ni se usaría buró de crédito externo (DataCrédito/CIFIN) — prohibido explícitamente por el reto y
+por la Ley 1266/2008.
