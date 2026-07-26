@@ -101,15 +101,3 @@ FastAPI desde el mismo proyecto):
   `PERPLEXITY_API_KEY`, `FRONTEND_ORIGIN` (URL real del frontend ya desplegado).
 - **Frontend**: Root Directory `frontend`, variable `NEXT_PUBLIC_BACKEND_URL` (URL real del
   backend ya desplegado).
-
-## Notas de seguridad
-
-El dataset que entregó Colsubsidio en el hackathon es de afiliados reales. **Nunca se commitea al
-repo** (ver `.gitignore` — bloquea `*.csv` crudos, `data/raw/`, `data/real/`, y la versión limpia
-`data_limpia.pkl`). El tratamiento de esta data interna está cubierto por el aviso de privacidad
-vigente de Colsubsidio (autoriza uso para "ofertas y promociones", Ley 1581/2012 + Decreto
-1377/2013); cualquier enriquecimiento con comportamiento digital/redes sociales en producción real
-sí requeriría autorización previa expresa del titular bajo esa misma ley, salvo dato de fuente
-pública. Los `.pkl.gz` del modelo LCA sí se suben (parámetros del modelo, no datos por persona);
-las probabilidades reales por afiliado (`lca_pi.pkl.gz`) están anonimizadas (`SERIE` correlativo,
-sin cédula).
