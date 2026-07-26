@@ -14,9 +14,7 @@ conversión — que ejecutamos directamente en **Salesforce Marketing Cloud**.
 
 ## 1. El problema y cómo lo resolvemos
 
-Colsubsidio tiene **1.6M afiliados reales, 73% potenciales para crédito, solo 16% de penetración**
-(cifra oficial del reto — no del dataset dummy que usamos para construir y demostrar el sistema,
-ver §2). Hoy casi todos reciben la misma oferta por el mismo canal. Nuestra solución tiene tres
+Hoy casi todos reciben la misma oferta por el mismo canal. Nuestra solución tiene tres
 piezas, cada una resolviendo una parte distinta del problema:
 
 1. **Segmentación estadística (MCA + Latent Class Analysis)** sobre un dataset dummy con la misma
@@ -37,8 +35,7 @@ piezas, cada una resolviendo una parte distinta del problema:
 
 **El dataset que usamos para construir y demostrar todo el sistema es dummy/ficticio — no es data
 real de producción de Colsubsidio.** Para el Reto 1 (Crédito Hiperpersonalizado) no nos entregaron
-data real: la información de crédito de sus afiliados es sensible y no se comparte en un
-hackathon. Lo que sí vimos viable fue reutilizar el dataset del **reto de seguros** del mismo
+data real. Lo que sí vimos viable fue reutilizar el dataset del **reto de seguros** del mismo
 hackathon — tiene la misma forma de afiliado (demográficos + uso de servicios) que necesitábamos
 para construir y probar un motor de personalización — así que lo adaptamos como base **dummy** para
 simular el reto de crédito con un volumen y una estructura de dato realistas.
@@ -62,7 +59,7 @@ que Colsubsidio conecte data real:
 | `ESTADOAFILIADO` | 100% constante ("Al día") | Fuera del modelo, no aporta nada |
 
 Como el reto **exige** combinar el perfil del afiliado con señal de comportamiento que el dataset
-dummy no trae, y **prohíbe** usar buró de crédito externo (DataCrédito/CIFIN — Ley 1266/2008),
+dummy no trae, y **prohíbe** usar buró de crédito externo,
 enriquecimos cada segmento (nunca cada persona individual) con cuatro familias de datos externos
 **reales y citables** — estas sí son fuente real, no dummy, y son las que de verdad generan la
 personalización:
